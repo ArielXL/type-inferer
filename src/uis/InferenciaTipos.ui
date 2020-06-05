@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>InferenciaTipos</class>
+ <widget class="QMainWindow" name="InferenciaTipos">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1350</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Inferencia de Tipos</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../images/Qt.ico</normaloff>../../images/Qt.ico</iconset>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidgetCodigo">
+      <property name="font">
+       <font>
+        <family>Tahoma</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="tabCodigoCOOL">
+       <attribute name="title">
+        <string>Código de COOL</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QPlainTextEdit" name="textCodigoCOOL">
+          <property name="font">
+           <font>
+            <pointsize>18</pointsize>
+           </font>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabResultados">
+       <attribute name="title">
+        <string>Resultados</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QPlainTextEdit" name="textResultados">
+          <property name="font">
+           <font>
+            <pointsize>18</pointsize>
+           </font>
+          </property>
+          <property name="undoRedoEnabled">
+           <bool>false</bool>
+          </property>
+          <property name="lineWrapMode">
+           <enum>QPlainTextEdit::NoWrap</enum>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1350</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuArchivo">
+    <property name="title">
+     <string>Archivo</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionNuevoCodigo"/>
+    <addaction name="separator"/>
+    <addaction name="actionCargarCodigo"/>
+    <addaction name="separator"/>
+    <addaction name="actionGuardarCodigo"/>
+    <addaction name="actionGuardarResultados"/>
+    <addaction name="separator"/>
+    <addaction name="actionSalir"/>
+   </widget>
+   <widget class="QMenu" name="menuAcercaDe">
+    <property name="title">
+     <string>Acerca de</string>
+    </property>
+    <addaction name="actionAcercaAutores"/>
+    <addaction name="actionAcercaInferenciaTipos"/>
+   </widget>
+   <widget class="QMenu" name="menuAnalisis">
+    <property name="title">
+     <string>Análisis</string>
+    </property>
+    <addaction name="actionAnalisis"/>
+   </widget>
+   <widget class="QMenu" name="menuAyuda">
+    <property name="title">
+     <string>Ayuda</string>
+    </property>
+    <addaction name="actionAyuda"/>
+   </widget>
+   <addaction name="menuArchivo"/>
+   <addaction name="menuAnalisis"/>
+   <addaction name="menuAcercaDe"/>
+   <addaction name="menuAyuda"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="font">
+    <font>
+     <family>Tahoma</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </widget>
+  <action name="actionNuevoCodigo">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../images/selection-input.png</normaloff>../../images/selection-input.png</iconset>
+   </property>
+   <property name="text">
+    <string>Nuevo código</string>
+   </property>
+   <property name="statusTip">
+    <string>Nuevo código</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionGuardarResultados">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/disk--pencil.png</normaloff>images/disk--pencil.png</iconset>
+   </property>
+   <property name="text">
+    <string>Guardar resultados</string>
+   </property>
+   <property name="statusTip">
+    <string>Guardar resultados</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actionCargarCodigo">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../images/blue-folder-horizontal-open.png</normaloff>../../images/blue-folder-horizontal-open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cargar código</string>
+   </property>
+   <property name="statusTip">
+    <string>Cargar código</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSalir">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../images/cross-circle.png</normaloff>../../images/cross-circle.png</iconset>
+   </property>
+   <property name="text">
+    <string>Salir</string>
+   </property>
+   <property name="statusTip">
+    <string>Salir</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F4</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../images/question.png</normaloff>../../images/question.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ayuda</string>
+   </property>
+   <property name="statusTip">
+    <string>¿Cómo usar?</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="actionAyuda">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../images/question.png</normaloff>../../images/question.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ayuda</string>
+   </property>
+   <property name="statusTip">
+    <string>Ayuda</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="actionAcercaInferenciaTipos">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../images/lifebuoy.png</normaloff>../../images/lifebuoy.png</iconset>
+   </property>
+   <property name="text">
+    <string>Acerca de Inferencia de Tipos</string>
+   </property>
+   <property name="statusTip">
+    <string>Acerca de Inferencia de Tipos</string>
+   </property>
+  </action>
+  <action name="actionSaveGrammarAs">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../images/disk--pencil.png</normaloff>../../images/disk--pencil.png</iconset>
+   </property>
+   <property name="text">
+    <string>Guardar gramática como ...</string>
+   </property>
+   <property name="statusTip">
+    <string>Guardar Gramática Como</string>
+   </property>
+  </action>
+  <action name="actionAnalyse">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/control.png</normaloff>images/control.png</iconset>
+   </property>
+   <property name="text">
+    <string>Analizar</string>
+   </property>
+   <property name="toolTip">
+    <string>Analizar</string>
+   </property>
+   <property name="statusTip">
+    <string>Analizar</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>F5</string>
+   </property>
+  </action>
+  <action name="actionQuickAnalyse">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/controlx2.png</normaloff>images/controlx2.png</iconset>
+   </property>
+   <property name="text">
+    <string>Análisis rápido</string>
+   </property>
+   <property name="toolTip">
+    <string>Análisis rápido</string>
+   </property>
+   <property name="statusTip">
+    <string>Análisis rápido</string>
+   </property>
+   <property name="shortcut">
+    <string>F9</string>
+   </property>
+  </action>
+  <action name="actionAnalisis">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../images/control.png</normaloff>../../images/control.png</iconset>
+   </property>
+   <property name="text">
+    <string>Análisis</string>
+   </property>
+   <property name="statusTip">
+    <string>Análisis</string>
+   </property>
+   <property name="shortcut">
+    <string>F5</string>
+   </property>
+  </action>
+  <action name="actionQuickAnalyse_2">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../images/controlx2.png</normaloff>../../images/controlx2.png</iconset>
+   </property>
+   <property name="text">
+    <string>Análisis rápido de la gramática</string>
+   </property>
+   <property name="shortcut">
+    <string>F9</string>
+   </property>
+  </action>
+  <action name="actionAcercaAutores">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../images/lifebuoy.png</normaloff>../../images/lifebuoy.png</iconset>
+   </property>
+   <property name="text">
+    <string>Acerca de los autores</string>
+   </property>
+   <property name="statusTip">
+    <string>Acerca de los autores</string>
+   </property>
+  </action>
+  <action name="actionGuardarCodigo">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/disk.png</normaloff>images/disk.png</iconset>
+   </property>
+   <property name="text">
+    <string>Guardar código</string>
+   </property>
+   <property name="statusTip">
+    <string>Guardar código</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
