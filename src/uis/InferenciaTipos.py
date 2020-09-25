@@ -1,4 +1,14 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'InferenciaTipos.ui'
+#
+# Created by: PyQt5 UI code generator 5.13.2
+#
+# WARNING! All changes made in this file will be lost!
+
+
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_InferenciaTipos(object):
     def setupUi(self, InferenciaTipos):
@@ -51,14 +61,12 @@ class Ui_InferenciaTipos(object):
         self.menubar = QtWidgets.QMenuBar(InferenciaTipos)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1350, 22))
         self.menubar.setObjectName("menubar")
-        self.menuArchivo = QtWidgets.QMenu(self.menubar)
-        self.menuArchivo.setObjectName("menuArchivo")
-        self.menuAcercaDe = QtWidgets.QMenu(self.menubar)
-        self.menuAcercaDe.setObjectName("menuAcercaDe")
+        self.menuInicio = QtWidgets.QMenu(self.menubar)
+        self.menuInicio.setObjectName("menuInicio")
         self.menuAnalisis = QtWidgets.QMenu(self.menubar)
         self.menuAnalisis.setObjectName("menuAnalisis")
-        self.menuAyuda = QtWidgets.QMenu(self.menubar)
-        self.menuAyuda.setObjectName("menuAyuda")
+        self.menuOpciones = QtWidgets.QMenu(self.menubar)
+        self.menuOpciones.setObjectName("menuOpciones")
         InferenciaTipos.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(InferenciaTipos)
         font = QtGui.QFont()
@@ -102,7 +110,7 @@ class Ui_InferenciaTipos(object):
         self.actionAcercaInferenciaTipos.setObjectName("actionAcercaInferenciaTipos")
         self.actionSaveGrammarAs = QtWidgets.QAction(InferenciaTipos)
         icon7 = QtGui.QIcon()
-        icon7.addPixmap(QtGui.QPixmap("images/disk--pencil.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon7.addPixmap(QtGui.QPixmap("../../images/disk--pencil.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.actionSaveGrammarAs.setIcon(icon7)
         self.actionSaveGrammarAs.setObjectName("actionSaveGrammarAs")
         self.actionAnalyse = QtWidgets.QAction(InferenciaTipos)
@@ -136,23 +144,22 @@ class Ui_InferenciaTipos(object):
         icon12.addPixmap(QtGui.QPixmap("images/disk.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.actionGuardarCodigo.setIcon(icon12)
         self.actionGuardarCodigo.setObjectName("actionGuardarCodigo")
-        self.menuArchivo.addSeparator()
-        self.menuArchivo.addAction(self.actionNuevoCodigo)
-        self.menuArchivo.addSeparator()
-        self.menuArchivo.addAction(self.actionCargarCodigo)
-        self.menuArchivo.addSeparator()
-        self.menuArchivo.addAction(self.actionGuardarCodigo)
-        self.menuArchivo.addAction(self.actionGuardarResultados)
-        self.menuArchivo.addSeparator()
-        self.menuArchivo.addAction(self.actionSalir)
-        self.menuAcercaDe.addAction(self.actionAcercaAutores)
-        self.menuAcercaDe.addAction(self.actionAcercaInferenciaTipos)
+        self.menuInicio.addSeparator()
+        self.menuInicio.addAction(self.actionNuevoCodigo)
+        self.menuInicio.addSeparator()
+        self.menuInicio.addAction(self.actionCargarCodigo)
+        self.menuInicio.addSeparator()
+        self.menuInicio.addAction(self.actionGuardarCodigo)
+        self.menuInicio.addAction(self.actionGuardarResultados)
+        self.menuInicio.addSeparator()
+        self.menuInicio.addAction(self.actionSalir)
         self.menuAnalisis.addAction(self.actionAnalisis)
-        self.menuAyuda.addAction(self.actionAyuda)
-        self.menubar.addAction(self.menuArchivo.menuAction())
+        self.menuOpciones.addAction(self.actionAyuda)
+        self.menuOpciones.addSeparator()
+        self.menuOpciones.addAction(self.actionAcercaAutores)
+        self.menubar.addAction(self.menuInicio.menuAction())
         self.menubar.addAction(self.menuAnalisis.menuAction())
-        self.menubar.addAction(self.menuAcercaDe.menuAction())
-        self.menubar.addAction(self.menuAyuda.menuAction())
+        self.menubar.addAction(self.menuOpciones.menuAction())
 
         self.retranslateUi(InferenciaTipos)
         self.tabWidgetCodigo.setCurrentIndex(1)
@@ -163,10 +170,9 @@ class Ui_InferenciaTipos(object):
         InferenciaTipos.setWindowTitle(_translate("InferenciaTipos", "Inferencia de Tipos"))
         self.tabWidgetCodigo.setTabText(self.tabWidgetCodigo.indexOf(self.tabCodigoCOOL), _translate("InferenciaTipos", "Código de COOL"))
         self.tabWidgetCodigo.setTabText(self.tabWidgetCodigo.indexOf(self.tabResultados), _translate("InferenciaTipos", "Resultados"))
-        self.menuArchivo.setTitle(_translate("InferenciaTipos", "Archivo"))
-        self.menuAcercaDe.setTitle(_translate("InferenciaTipos", "Acerca de"))
+        self.menuInicio.setTitle(_translate("InferenciaTipos", "Inicio"))
         self.menuAnalisis.setTitle(_translate("InferenciaTipos", "Análisis"))
-        self.menuAyuda.setTitle(_translate("InferenciaTipos", "Ayuda"))
+        self.menuOpciones.setTitle(_translate("InferenciaTipos", "Opciones"))
         self.actionNuevoCodigo.setText(_translate("InferenciaTipos", "Nuevo código"))
         self.actionNuevoCodigo.setStatusTip(_translate("InferenciaTipos", "Nuevo código"))
         self.actionNuevoCodigo.setShortcut(_translate("InferenciaTipos", "Ctrl+N"))

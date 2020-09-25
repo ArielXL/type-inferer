@@ -92,9 +92,9 @@
      <height>22</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuArchivo">
+   <widget class="QMenu" name="menuInicio">
     <property name="title">
-     <string>Archivo</string>
+     <string>Inicio</string>
     </property>
     <addaction name="separator"/>
     <addaction name="actionNuevoCodigo"/>
@@ -106,29 +106,23 @@
     <addaction name="separator"/>
     <addaction name="actionSalir"/>
    </widget>
-   <widget class="QMenu" name="menuAcercaDe">
-    <property name="title">
-     <string>Acerca de</string>
-    </property>
-    <addaction name="actionAcercaAutores"/>
-    <addaction name="actionAcercaInferenciaTipos"/>
-   </widget>
    <widget class="QMenu" name="menuAnalisis">
     <property name="title">
      <string>Análisis</string>
     </property>
     <addaction name="actionAnalisis"/>
    </widget>
-   <widget class="QMenu" name="menuAyuda">
+   <widget class="QMenu" name="menuOpciones">
     <property name="title">
-     <string>Ayuda</string>
+     <string>Opciones</string>
     </property>
     <addaction name="actionAyuda"/>
+    <addaction name="separator"/>
+    <addaction name="actionAcercaAutores"/>
    </widget>
-   <addaction name="menuArchivo"/>
+   <addaction name="menuInicio"/>
    <addaction name="menuAnalisis"/>
-   <addaction name="menuAcercaDe"/>
-   <addaction name="menuAyuda"/>
+   <addaction name="menuOpciones"/>
   </widget>
   <widget class="QStatusBar" name="statusbar">
    <property name="font">

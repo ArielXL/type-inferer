@@ -9,7 +9,6 @@ from PyQt5.QtPrintSupport import *
 from uis.Ayuda import Ui_Ayuda
 from uis.AcercaAutores import Ui_AcercaAutores
 from uis.InferenciaTipos import Ui_InferenciaTipos
-from uis.AcercaInferenciaTipos import Ui_AcercaInferenciaTipos
 
 from cmp.lexer import *
 from utils.macros import *
@@ -39,7 +38,6 @@ class MainWindow(QMainWindow):
         self.ui.actionSalir.triggered.connect(self.Exit)
         self.ui.actionAyuda.triggered.connect(self.Help)
         self.ui.actionAcercaAutores.triggered.connect(self.AboutAuthors)
-        self.ui.actionAcercaInferenciaTipos.triggered.connect(self.AboutTypeInferer)
 
         self.NewCode()
 
@@ -228,13 +226,6 @@ class MainWindow(QMainWindow):
     def AboutAuthors(self):
         dialog = QDialog()
         ui_dialog = Ui_AcercaAutores()
-        ui_dialog.setupUi(dialog)
-
-        dialog.exec()
-
-    def AboutTypeInferer(self):
-        dialog = QDialog()
-        ui_dialog = Ui_AcercaInferenciaTipos()
         ui_dialog.setupUi(dialog)
 
         dialog.exec()
