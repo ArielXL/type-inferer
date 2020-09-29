@@ -6,7 +6,7 @@ class Main inherits IO {
             esac
     };
     
-    no_infer(x: AUTO_TYPE, y: AUTO_TYPE): AUTO_TYPE {
+    no_infer(x : AUTO_TYPE, y : AUTO_TYPE) : AUTO_TYPE {
         {
             x <- 1;
             x <- "1";

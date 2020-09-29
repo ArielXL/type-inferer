@@ -18,7 +18,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../../images/Qt.ico</normaloff>../../images/Qt.ico</iconset>
+    <normaloff>images/Qt.ico</normaloff>images/Qt.ico</iconset>
   </property>
   <property name="tabShape">
    <enum>QTabWidget::Rounded</enum>
@@ -36,7 +36,7 @@
        </font>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tabCodigoCOOL">
        <attribute name="title">
@@ -118,6 +118,8 @@
     </property>
     <addaction name="actionAyuda"/>
     <addaction name="separator"/>
+    <addaction name="actionOrientacion"/>
+    <addaction name="separator"/>
     <addaction name="actionAcercaAutores"/>
    </widget>
    <addaction name="menuInicio"/>
@@ -135,7 +137,7 @@
   <action name="actionNuevoCodigo">
    <property name="icon">
     <iconset>
-     <normaloff>../../images/selection-input.png</normaloff>../../images/selection-input.png</iconset>
+     <normaloff>images/selection-input.png</normaloff>images/selection-input.png</iconset>
    </property>
    <property name="text">
     <string>Nuevo código</string>
@@ -165,7 +167,7 @@
   <action name="actionCargarCodigo">
    <property name="icon">
     <iconset>
-     <normaloff>../../images/blue-folder-horizontal-open.png</normaloff>../../images/blue-folder-horizontal-open.png</iconset>
+     <normaloff>images/blue-folder-horizontal-open.png</normaloff>images/blue-folder-horizontal-open.png</iconset>
    </property>
    <property name="text">
     <string>Cargar código</string>
@@ -180,7 +182,7 @@
   <action name="actionSalir">
    <property name="icon">
     <iconset>
-     <normaloff>../../images/cross-circle.png</normaloff>../../images/cross-circle.png</iconset>
+     <normaloff>images/cross-circle.png</normaloff>images/cross-circle.png</iconset>
    </property>
    <property name="text">
     <string>Salir</string>
@@ -210,7 +212,7 @@
   <action name="actionAyuda">
    <property name="icon">
     <iconset>
-     <normaloff>../../images/question.png</normaloff>../../images/question.png</iconset>
+     <normaloff>images/question.png</normaloff>images/question.png</iconset>
    </property>
    <property name="text">
     <string>Ayuda</string>
@@ -290,7 +292,7 @@
   <action name="actionAnalisis">
    <property name="icon">
     <iconset>
-     <normaloff>../../images/control.png</normaloff>../../images/control.png</iconset>
+     <normaloff>images/control.png</normaloff>images/control.png</iconset>
    </property>
    <property name="text">
     <string>Análisis</string>
@@ -317,7 +319,7 @@
   <action name="actionAcercaAutores">
    <property name="icon">
     <iconset>
-     <normaloff>../../images/lifebuoy.png</normaloff>../../images/lifebuoy.png</iconset>
+     <normaloff>images/lifebuoy.png</normaloff>images/lifebuoy.png</iconset>
    </property>
    <property name="text">
     <string>Acerca de los autores</string>
@@ -339,6 +341,15 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionOrientacion">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/clipboard-paste-document-text.png</normaloff>images/clipboard-paste-document-text.png</iconset>
+   </property>
+   <property name="text">
+    <string>Orientación</string>
    </property>
   </action>
  </widget>

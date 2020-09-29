@@ -7,6 +7,7 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtPrintSupport import *
 
 from uis.Ayuda import Ui_Ayuda
+from uis.Orientacion import Ui_Orientacion
 from uis.AcercaAutores import Ui_AcercaAutores
 from uis.InferenciaTipos import Ui_InferenciaTipos
 
@@ -37,6 +38,7 @@ class MainWindow(QMainWindow):
         self.ui.actionAnalisis.triggered.connect(self.AnalyseCode)
         self.ui.actionSalir.triggered.connect(self.Exit)
         self.ui.actionAyuda.triggered.connect(self.Help)
+        self.ui.actionOrientacion.triggered.connect(self.Orientation)
         self.ui.actionAcercaAutores.triggered.connect(self.AboutAuthors)
 
         self.NewCode()
@@ -130,6 +132,8 @@ class MainWindow(QMainWindow):
         if not operations:
             self.ui.textResultados.setPlainText(f'{self.ui.textResultados.toPlainText()}{UNEXCEPTED_TOKEN % (parse.lex, parse.line, parse.column)}\n')
             print(UNEXCEPTED_TOKEN % (parse.lex, parse.line, parse.column))
+            self.ui.tabWidgetCodigo.setTabEnabled(1, True)
+            self.ui.tabWidgetCodigo.setCurrentIndex(1)
             return
         productions = '\n'.join(repr(x) for x in parse)
         print(productions)
@@ -219,6 +223,13 @@ class MainWindow(QMainWindow):
     def Help(self):
         dialog = QDialog()
         ui_dialog = Ui_Ayuda()
+        ui_dialog.setupUi(dialog)
+
+        dialog.exec()
+
+    def Orientation(self):
+        dialog = QDialog()
+        ui_dialog = Ui_Orientacion()
         ui_dialog.setupUi(dialog)
 
         dialog.exec()

@@ -9,6 +9,9 @@ class Utils:
 
     @type_check
     def CheckParams(args : list) -> bool:
+        '''
+        Verifica que solamente se pase un solo parametro.
+        '''
         if len(args) == 1:
             return True
         else:

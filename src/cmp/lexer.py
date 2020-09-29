@@ -5,7 +5,6 @@ from cmp.utils_lexer import Token
 from cmp.parser import CoolGrammar
 from utils.type_check import type_check
 
-
 tokens_dict = dict()
 
 literals = ['+', '-', '*', '/', ':', ';', '(', ')', '{', '}', '@', '.', ',']
@@ -130,7 +129,7 @@ def PrintTokens(tokens : list) -> None:
         if token.token_type in { ocur, ccur, semi }:
             if token.token_type == ccur:
                 indent -= 1
-            print('    '*indent + ' '.join(str(t.token_type) for t in pending))
+            print('    ' * indent + ' '.join(str(t.token_type) for t in pending))
             pending.clear()
             if token.token_type == ocur:
                 indent += 1

@@ -6,4 +6,3 @@ class Main inherits IO {
             esac
     };
 };
-
