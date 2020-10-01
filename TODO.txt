@@ -1,3 +1,0 @@
-* Leer el libro de Compilacion (capitulo 6).
-* Leer clases practicas 13, 14 y 15
-* 
