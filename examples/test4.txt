@@ -1,0 +1,324 @@
+============================ PARSER ============================
+<param> -> id : type
+<param> -> id : type
+<param-list> -> <param>
+<param-list> -> <param> , <param-list>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> ( <expr> )
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <arith> + <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> ( <expr> )
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <arith> - <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<arg-list> -> <expr> , <arg-list>
+<member-call> -> id ( <arg-list> )
+<atom> -> <member-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <arith> - <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <arith> - <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<arg-list> -> <expr> , <arg-list>
+<member-call> -> id ( <arg-list> )
+<atom> -> <member-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<arg-list> -> <expr> , <arg-list>
+<member-call> -> id ( <arg-list> )
+<atom> -> <member-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr> -> if <expr> then <expr> else <expr> fi
+<expr> -> if <expr> then <expr> else <expr> fi
+<feature> -> id ( <param-list> ) : type { <expr> } ;
+<feature-list> -> ε
+<feature-list> -> <feature> <feature-list>
+<def-class> -> class type { <feature-list> } ;
+<class-list> -> <def-class>
+<program> -> <class-list>
+============================= AST ==============================
+\__ProgramNode [<class> ... <class>]
+    \__ClassDeclarationNode : class Main  { <feature> ... <feature> }
+        \__FuncDeclarationNode : ackermann(m : AUTO_TYPE, n : AUTO_TYPE) : AUTO_TYPE { <expr> }
+            \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                \__<expr> EqualNode <expr>
+                    \__IdNode : m
+                    \__IntegerNode : 0
+                \__<expr> PlusNode <expr>
+                    \__IdNode : n
+                    \__IntegerNode : 1
+                \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                    \__<expr> EqualNode <expr>
+                        \__IdNode : n
+                        \__IntegerNode : 0
+                    \__MemberCallNode : ackermann(<expr>, ..., <expr>)
+                        \__<expr> MinusNode <expr>
+                            \__IdNode : m
+                            \__IntegerNode : 1
+                        \__IntegerNode : 1
+                    \__MemberCallNode : ackermann(<expr>, ..., <expr>)
+                        \__<expr> MinusNode <expr>
+                            \__IdNode : m
+                            \__IntegerNode : 1
+                        \__MemberCallNode : ackermann(<expr>, ..., <expr>)
+                            \__IdNode : m
+                            \__<expr> MinusNode <expr>
+                                \__IdNode : n
+                                \__IntegerNode : 1
+======================= COLECCIONANDO TIPOS ========================
+ERRORES : [
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {}
+    
+    tipo IO {}
+    
+    tipo Int {}
+    
+    tipo String {}
+    
+    tipo Bool {}
+    
+    tipo Main {}
+    
+}
+======================= CONSTRUYENDO TIPOS ========================
+ERRORES : [
+    ERROR!!! LINEA 1 , COLUMNA 6 : LA CLASE Main Y EL METODO main SON NECESARIOS.
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {
+        [method] abort() : Object ;
+        [method] type_name() : String ;
+        [method] copy() : SELF_TYPE ;
+    }
+    
+    tipo IO : Object {
+        [method] out_string(s : String) : SELF_TYPE ;
+        [method] out_int(i : Int) : SELF_TYPE ;
+        [method] in_string() : String ;
+        [method] in_int() : Int ;
+    }
+    
+    tipo Int : Object {}
+    
+    tipo String : Object {
+        [method] length() : Int ;
+        [method] concat(s : String) : String ;
+        [method] substr(pos : Int, len : Int) : String ;
+    }
+    
+    tipo Bool : Object {}
+    
+    tipo Main : Object {
+        [method] ackermann(m : AUTO_TYPE, n : AUTO_TYPE) : AUTO_TYPE ;
+    }
+    
+}
+======================== CHEQUEANDO TIPOS =========================
+ERRORES : [
+    ERROR!!! LINEA 1 , COLUMNA 6 : LA CLASE Main Y EL METODO main SON NECESARIOS.
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {
+        [method] abort() : Object ;
+        [method] type_name() : String ;
+        [method] copy() : SELF_TYPE ;
+    }
+    
+    tipo IO : Object {
+        [method] out_string(s : String) : SELF_TYPE ;
+        [method] out_int(i : Int) : SELF_TYPE ;
+        [method] in_string() : String ;
+        [method] in_int() : Int ;
+    }
+    
+    tipo Int : Object {}
+    
+    tipo String : Object {
+        [method] length() : Int ;
+        [method] concat(s : String) : String ;
+        [method] substr(pos : Int, len : Int) : String ;
+    }
+    
+    tipo Bool : Object {}
+    
+    tipo Main : Object {
+        [method] ackermann(m : AUTO_TYPE, n : AUTO_TYPE) : AUTO_TYPE ;
+    }
+    
+}
+======================== INFERENCIA DE TIPOS ========================
+INFERENCIA : [
+    NO SE PUEDE INFERIR EL TIPO "Int" DEL PARAMETRO "m", EN EL METODO "ackermann" Y EN LA CLASE "Main".
+    NO SE PUEDE INFERIR EL TIPO "Int" DEL PARAMETRO "n", EN EL METODO "ackermann" Y EN LA CLASE "Main".
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {
+        [method] abort() : Object ;
+        [method] type_name() : String ;
+        [method] copy() : SELF_TYPE ;
+    }
+    
+    tipo IO : Object {
+        [method] out_string(s : String) : SELF_TYPE ;
+        [method] out_int(i : Int) : SELF_TYPE ;
+        [method] in_string() : String ;
+        [method] in_int() : Int ;
+    }
+    
+    tipo Int : Object {}
+    
+    tipo String : Object {
+        [method] length() : Int ;
+        [method] concat(s : String) : String ;
+        [method] substr(pos : Int, len : Int) : String ;
+    }
+    
+    tipo Bool : Object {}
+    
+    tipo Main : Object {
+        [method] ackermann(m : Int, n : Int) : AUTO_TYPE ;
+    }
+    
+}

@@ -1,0 +1,689 @@
+============================ PARSER ============================
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <arith> + <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<let-list> -> id : type <- <expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> string
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<member-call> -> id ( <arg-list> )
+<atom> -> <member-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<case-list> -> id : type => <expr> ;
+<expr> -> case <expr> of <case-list> esac
+<expr> -> let <let-list> in <expr>
+<feature> -> id ( ) : type { <expr> } ;
+<atom> -> new type
+<func-call> -> . id ( )
+<atom> -> <atom> <func-call>
+<func-call> -> . id ( )
+<atom> -> <atom> <func-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<let-list> -> id : type <- <expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr> -> let <let-list> in <expr>
+<feature> -> id ( ) : type { <expr> } ;
+<param> -> id : type
+<param-list> -> <param>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <arith> + <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<feature> -> id ( <param-list> ) : type { <expr> } ;
+<param> -> id : type
+<param-list> -> <param>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <arith> + <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<feature> -> id ( <param-list> ) : type { <expr> } ;
+<param> -> id : type
+<param-list> -> <param>
+<atom> -> id
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<arg-list> -> <expr> , <arg-list>
+<func-call> -> . id ( <arg-list> )
+<atom> -> <atom> <func-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<feature> -> id ( <param-list> ) : type { <expr> } ;
+<atom> -> new type
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<let-list> -> id : type <- <expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<member-call> -> id ( <arg-list> )
+<atom> -> <member-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr> -> let <let-list> in <expr>
+<feature> -> id ( ) : type { <expr> } ;
+<param> -> id : type
+<param-list> -> <param>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> < <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> ( <expr> )
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <arith> - <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<member-call> -> id ( <arg-list> )
+<atom> -> <member-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <term> * <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr> -> if <expr> then <expr> else <expr> fi
+<feature> -> id ( <param-list> ) : type { <expr> } ;
+<param> -> id : type
+<param> -> id : type
+<param-list> -> <param>
+<param-list> -> <param> , <param-list>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> ( <expr> )
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <arith> + <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> ( <expr> )
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <arith> - <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<arg-list> -> <expr> , <arg-list>
+<member-call> -> id ( <arg-list> )
+<atom> -> <member-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <arith> - <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <arith> - <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<arg-list> -> <expr> , <arg-list>
+<member-call> -> id ( <arg-list> )
+<atom> -> <member-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<arg-list> -> <expr> , <arg-list>
+<member-call> -> id ( <arg-list> )
+<atom> -> <member-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr> -> if <expr> then <expr> else <expr> fi
+<expr> -> if <expr> then <expr> else <expr> fi
+<feature> -> id ( <param-list> ) : type { <expr> } ;
+<param> -> id : type
+<param> -> id : type
+<param-list> -> <param>
+<param-list> -> <param> , <param-list>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr> -> id <- <expr>
+<atom> -> string
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr> -> id <- <expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr> -> id <- <expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr-list> -> <expr> ;
+<expr-list> -> <expr> ; <expr-list>
+<expr-list> -> <expr> ; <expr-list>
+<expr-list> -> <expr> ; <expr-list>
+<expr> -> { <expr-list> }
+<feature> -> id ( <param-list> ) : type { <expr> } ;
+<feature-list> -> ε
+<feature-list> -> <feature> <feature-list>
+<feature-list> -> <feature> <feature-list>
+<feature-list> -> <feature> <feature-list>
+<feature-list> -> <feature> <feature-list>
+<feature-list> -> <feature> <feature-list>
+<feature-list> -> <feature> <feature-list>
+<feature-list> -> <feature> <feature-list>
+<feature-list> -> <feature> <feature-list>
+<feature-list> -> <feature> <feature-list>
+<def-class> -> class type inherits type { <feature-list> } ;
+<class-list> -> <def-class>
+<program> -> <class-list>
+============================= AST ==============================
+\__ProgramNode [<class> ... <class>]
+    \__ClassDeclarationNode : class Main inherits IO { <feature> ... <feature> }
+        \__FuncDeclarationNode : main() : SELF_TYPE { <expr> }
+            \__LetInNode : let x : AUTO_TYPE <- <expr> in <expr>
+                \__<expr> PlusNode <expr>
+                    \__IntegerNode : 3
+                    \__IntegerNode : 2
+                \__CaseOfNode : case <expr> of y : Int => <expr>; esac
+                    \__IdNode : x
+                    \__MemberCallNode : out_string(<expr>, ..., <expr>)
+                        \__StringNode : Ok
+        \__FuncDeclarationNode : break() : AUTO_TYPE { <expr> }
+            \__LetInNode : let x : AUTO_TYPE <- <expr> in <expr>
+                \__FunctionCallNode : <obj>.main(<expr>, ..., <expr>)
+                    \__FunctionCallNode : <obj>.main(<expr>, ..., <expr>)
+                        \__NewNode : new Main
+
+
+                \__IdNode : x
+        \__FuncDeclarationNode : succ(n : Int) : AUTO_TYPE { <expr> }
+            \__<expr> PlusNode <expr>
+                \__IdNode : n
+                \__IntegerNode : 1
+        \__FuncDeclarationNode : succ2(n : AUTO_TYPE) : AUTO_TYPE { <expr> }
+            \__<expr> PlusNode <expr>
+                \__IdNode : n
+                \__IntegerNode : 1
+        \__FuncDeclarationNode : step(p : AUTO_TYPE) : AUTO_TYPE { <expr> }
+            \__FunctionCallNode : <obj>.translate(<expr>, ..., <expr>)
+                \__IdNode : p
+                \__IntegerNode : 1
+                \__IntegerNode : 1
+        \__FuncDeclarationNode : test() : AUTO_TYPE { <expr> }
+            \__LetInNode : let p : AUTO_TYPE <- <expr> in <expr>
+                \__NewNode : new Point
+                \__MemberCallNode : step(<expr>, ..., <expr>)
+                    \__IdNode : p
+        \__FuncDeclarationNode : fact(n : AUTO_TYPE) : AUTO_TYPE { <expr> }
+            \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                \__<expr> LessNode <expr>
+                    \__IdNode : n
+                    \__IntegerNode : 0
+                \__IntegerNode : 1
+                \__<expr> StarNode <expr>
+                    \__IdNode : n
+                    \__MemberCallNode : fact(<expr>, ..., <expr>)
+                        \__<expr> MinusNode <expr>
+                            \__IdNode : n
+                            \__IntegerNode : 1
+        \__FuncDeclarationNode : ackermann(m : AUTO_TYPE, n : AUTO_TYPE) : AUTO_TYPE { <expr> }
+            \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                \__<expr> EqualNode <expr>
+                    \__IdNode : m
+                    \__IntegerNode : 0
+                \__<expr> PlusNode <expr>
+                    \__IdNode : n
+                    \__IntegerNode : 1
+                \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                    \__<expr> EqualNode <expr>
+                        \__IdNode : n
+                        \__IntegerNode : 0
+                    \__MemberCallNode : ackermann(<expr>, ..., <expr>)
+                        \__<expr> MinusNode <expr>
+                            \__IdNode : m
+                            \__IntegerNode : 1
+                        \__IntegerNode : 1
+                    \__MemberCallNode : ackermann(<expr>, ..., <expr>)
+                        \__<expr> MinusNode <expr>
+                            \__IdNode : m
+                            \__IntegerNode : 1
+                        \__MemberCallNode : ackermann(<expr>, ..., <expr>)
+                            \__IdNode : m
+                            \__<expr> MinusNode <expr>
+                                \__IdNode : n
+                                \__IntegerNode : 1
+        \__FuncDeclarationNode : no_infer(x : AUTO_TYPE, y : AUTO_TYPE) : AUTO_TYPE { <expr> }
+            \__BlockNode : { <expr>; ... <expr>; }
+                \__AssingNode : x <- <expr>
+                    \__IntegerNode : 1
+                \__AssingNode : x <- <expr>
+                    \__StringNode : 1
+                \__AssingNode : y <- <expr>
+                    \__IdNode : x
+                \__IdNode : x
+======================= COLECCIONANDO TIPOS ========================
+ERRORES : [
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {}
+    
+    tipo IO {}
+    
+    tipo Int {}
+    
+    tipo String {}
+    
+    tipo Bool {}
+    
+    tipo Main {}
+    
+}
+======================= CONSTRUYENDO TIPOS ========================
+ERRORES : [
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {
+        [method] abort() : Object ;
+        [method] type_name() : String ;
+        [method] copy() : SELF_TYPE ;
+    }
+    
+    tipo IO : Object {
+        [method] out_string(s : String) : SELF_TYPE ;
+        [method] out_int(i : Int) : SELF_TYPE ;
+        [method] in_string() : String ;
+        [method] in_int() : Int ;
+    }
+    
+    tipo Int : Object {}
+    
+    tipo String : Object {
+        [method] length() : Int ;
+        [method] concat(s : String) : String ;
+        [method] substr(pos : Int, len : Int) : String ;
+    }
+    
+    tipo Bool : Object {}
+    
+    tipo Main : IO {
+        [method] main() : SELF_TYPE ;
+        [method] break() : AUTO_TYPE ;
+        [method] succ(n : Int) : AUTO_TYPE ;
+        [method] succ2(n : AUTO_TYPE) : AUTO_TYPE ;
+        [method] step(p : AUTO_TYPE) : AUTO_TYPE ;
+        [method] test() : AUTO_TYPE ;
+        [method] fact(n : AUTO_TYPE) : AUTO_TYPE ;
+        [method] ackermann(m : AUTO_TYPE, n : AUTO_TYPE) : AUTO_TYPE ;
+        [method] no_infer(x : AUTO_TYPE, y : AUTO_TYPE) : AUTO_TYPE ;
+    }
+    
+}
+======================== CHEQUEANDO TIPOS =========================
+ERRORES : [
+    ERROR!!! LINEA 17 , COLUMNA 40 : EL METODO "translate" NO ESTA DEFINIDO EN "AUTO_TYPE".
+    ERROR!!! LINEA 17 , COLUMNA 40 : EL METODO "translate" NO PUEDE SER dispatched.
+    ERROR!!! LINEA 20 , COLUMNA 33 : EL TIPO "Point" NO ESTA DEFINIDO.
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {
+        [method] abort() : Object ;
+        [method] type_name() : String ;
+        [method] copy() : SELF_TYPE ;
+    }
+    
+    tipo IO : Object {
+        [method] out_string(s : String) : SELF_TYPE ;
+        [method] out_int(i : Int) : SELF_TYPE ;
+        [method] in_string() : String ;
+        [method] in_int() : Int ;
+    }
+    
+    tipo Int : Object {}
+    
+    tipo String : Object {
+        [method] length() : Int ;
+        [method] concat(s : String) : String ;
+        [method] substr(pos : Int, len : Int) : String ;
+    }
+    
+    tipo Bool : Object {}
+    
+    tipo Main : IO {
+        [method] main() : SELF_TYPE ;
+        [method] break() : AUTO_TYPE ;
+        [method] succ(n : Int) : AUTO_TYPE ;
+        [method] succ2(n : AUTO_TYPE) : AUTO_TYPE ;
+        [method] step(p : AUTO_TYPE) : AUTO_TYPE ;
+        [method] test() : AUTO_TYPE ;
+        [method] fact(n : AUTO_TYPE) : AUTO_TYPE ;
+        [method] ackermann(m : AUTO_TYPE, n : AUTO_TYPE) : AUTO_TYPE ;
+        [method] no_infer(x : AUTO_TYPE, y : AUTO_TYPE) : AUTO_TYPE ;
+    }
+    
+}
+======================== INFERENCIA DE TIPOS ========================
+INFERENCIA : [
+    ERROR!!! LINEA 3 , COLUMNA 12 : NO SE PUEDE INFERIR EL TIPO "Int" DE LA VARIABLE "x".
+    ERROR!!! LINEA 10 , COLUMNA 9 : NO SE PUEDE INFERIR EL TIPO "Main" DE LA VARIABLE "x".
+    NO SE PUEDE INFERIR EL TIPO DE RETORNO "Main" EN EL METODO "break" Y EN LA CLASE "Main".
+    NO SE PUEDE INFERIR EL TIPO DE RETORNO "Int" EN EL METODO "succ" Y EN LA CLASE "Main".
+    NO SE PUEDE INFERIR EL TIPO "Int" DEL PARAMETRO "n", EN EL METODO "succ2" Y EN LA CLASE "Main".
+    NO SE PUEDE INFERIR EL TIPO DE RETORNO "Int" EN EL METODO "succ2" Y EN LA CLASE "Main".
+    NO SE PUEDE INFERIR EL TIPO "Int" DEL PARAMETRO "n", EN EL METODO "fact" Y EN LA CLASE "Main".
+    NO SE PUEDE INFERIR EL TIPO DE RETORNO "Int" EN EL METODO "fact" Y EN LA CLASE "Main".
+    NO SE PUEDE INFERIR EL TIPO "Int" DEL PARAMETRO "m", EN EL METODO "ackermann" Y EN LA CLASE "Main".
+    NO SE PUEDE INFERIR EL TIPO "Int" DEL PARAMETRO "n", EN EL METODO "ackermann" Y EN LA CLASE "Main".
+    NO SE PUEDE INFERIR EL TIPO "Object" DEL PARAMETRO "x", EN EL METODO "no_infer" Y EN LA CLASE "Main".
+    NO SE PUEDE INFERIR EL TIPO "Object" DEL PARAMETRO "y", EN EL METODO "no_infer" Y EN LA CLASE "Main".
+    NO SE PUEDE INFERIR EL TIPO DE RETORNO "Object" EN EL METODO "no_infer" Y EN LA CLASE "Main".
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {
+        [method] abort() : Object ;
+        [method] type_name() : String ;
+        [method] copy() : SELF_TYPE ;
+    }
+    
+    tipo IO : Object {
+        [method] out_string(s : String) : SELF_TYPE ;
+        [method] out_int(i : Int) : SELF_TYPE ;
+        [method] in_string() : String ;
+        [method] in_int() : Int ;
+    }
+    
+    tipo Int : Object {}
+    
+    tipo String : Object {
+        [method] length() : Int ;
+        [method] concat(s : String) : String ;
+        [method] substr(pos : Int, len : Int) : String ;
+    }
+    
+    tipo Bool : Object {}
+    
+    tipo Main : IO {
+        [method] main() : SELF_TYPE ;
+        [method] break() : Main ;
+        [method] succ(n : Int) : Int ;
+        [method] succ2(n : Int) : Int ;
+        [method] step(p : AUTO_TYPE) : AUTO_TYPE ;
+        [method] test() : AUTO_TYPE ;
+        [method] fact(n : Int) : Int ;
+        [method] ackermann(m : Int, n : Int) : AUTO_TYPE ;
+        [method] no_infer(x : Object, y : Object) : Object ;
+    }
+    
+}

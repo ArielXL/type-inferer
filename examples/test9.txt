@@ -1,0 +1,322 @@
+============================ PARSER ============================
+<param> -> id : type
+<param> -> id : type
+<param-list> -> <param>
+<param-list> -> <param> , <param-list>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> ( <expr> )
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <arith> + <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <term> / <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<arg-list> -> <expr> , <arg-list>
+<member-call> -> id ( <arg-list> )
+<atom> -> <member-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr> -> if <expr> then <expr> else <expr> fi
+<feature> -> id ( <param-list> ) : type { <expr> } ;
+<param> -> id : type
+<param> -> id : type
+<param-list> -> <param>
+<param-list> -> <param> , <param-list>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> ( <expr> )
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <term> / <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <arith> + <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<arg-list> -> <expr> , <arg-list>
+<member-call> -> id ( <arg-list> )
+<atom> -> <member-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr> -> if <expr> then <expr> else <expr> fi
+<feature> -> id ( <param-list> ) : type { <expr> } ;
+<feature-list> -> ε
+<feature-list> -> <feature> <feature-list>
+<feature-list> -> <feature> <feature-list>
+<def-class> -> class type { <feature-list> } ;
+<class-list> -> <def-class>
+<program> -> <class-list>
+============================= AST ==============================
+\__ProgramNode [<class> ... <class>]
+    \__ClassDeclarationNode : class Rec  { <feature> ... <feature> }
+        \__FuncDeclarationNode : f(a : AUTO_TYPE, b : AUTO_TYPE) : AUTO_TYPE { <expr> }
+            \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                \__<expr> EqualNode <expr>
+                    \__IdNode : a
+                    \__IntegerNode : 1
+                \__IdNode : b
+                \__MemberCallNode : g(<expr>, ..., <expr>)
+                    \__<expr> PlusNode <expr>
+                        \__IdNode : a
+                        \__IntegerNode : 1
+                    \__<expr> DivNode <expr>
+                        \__IdNode : b
+                        \__IntegerNode : 2
+        \__FuncDeclarationNode : g(a : AUTO_TYPE, b : AUTO_TYPE) : AUTO_TYPE { <expr> }
+            \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                \__<expr> EqualNode <expr>
+                    \__IdNode : b
+                    \__IntegerNode : 1
+                \__IdNode : a
+                \__MemberCallNode : f(<expr>, ..., <expr>)
+                    \__<expr> DivNode <expr>
+                        \__IdNode : a
+                        \__IntegerNode : 2
+                    \__<expr> PlusNode <expr>
+                        \__IdNode : b
+                        \__IntegerNode : 1
+======================= COLECCIONANDO TIPOS ========================
+ERRORES : [
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {}
+    
+    tipo IO {}
+    
+    tipo Int {}
+    
+    tipo String {}
+    
+    tipo Bool {}
+    
+    tipo Rec {}
+    
+}
+======================= CONSTRUYENDO TIPOS ========================
+ERRORES : [
+    ERROR!!! LINEA 1 , COLUMNA 6 : LA CLASE Main Y EL METODO main SON NECESARIOS.
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {
+        [method] abort() : Object ;
+        [method] type_name() : String ;
+        [method] copy() : SELF_TYPE ;
+    }
+    
+    tipo IO : Object {
+        [method] out_string(s : String) : SELF_TYPE ;
+        [method] out_int(i : Int) : SELF_TYPE ;
+        [method] in_string() : String ;
+        [method] in_int() : Int ;
+    }
+    
+    tipo Int : Object {}
+    
+    tipo String : Object {
+        [method] length() : Int ;
+        [method] concat(s : String) : String ;
+        [method] substr(pos : Int, len : Int) : String ;
+    }
+    
+    tipo Bool : Object {}
+    
+    tipo Rec : Object {
+        [method] f(a : AUTO_TYPE, b : AUTO_TYPE) : AUTO_TYPE ;
+        [method] g(a : AUTO_TYPE, b : AUTO_TYPE) : AUTO_TYPE ;
+    }
+    
+}
+======================== CHEQUEANDO TIPOS =========================
+ERRORES : [
+    ERROR!!! LINEA 1 , COLUMNA 6 : LA CLASE Main Y EL METODO main SON NECESARIOS.
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {
+        [method] abort() : Object ;
+        [method] type_name() : String ;
+        [method] copy() : SELF_TYPE ;
+    }
+    
+    tipo IO : Object {
+        [method] out_string(s : String) : SELF_TYPE ;
+        [method] out_int(i : Int) : SELF_TYPE ;
+        [method] in_string() : String ;
+        [method] in_int() : Int ;
+    }
+    
+    tipo Int : Object {}
+    
+    tipo String : Object {
+        [method] length() : Int ;
+        [method] concat(s : String) : String ;
+        [method] substr(pos : Int, len : Int) : String ;
+    }
+    
+    tipo Bool : Object {}
+    
+    tipo Rec : Object {
+        [method] f(a : AUTO_TYPE, b : AUTO_TYPE) : AUTO_TYPE ;
+        [method] g(a : AUTO_TYPE, b : AUTO_TYPE) : AUTO_TYPE ;
+    }
+    
+}
+======================== INFERENCIA DE TIPOS ========================
+INFERENCIA : [
+    NO SE PUEDE INFERIR EL TIPO "Int" DEL PARAMETRO "a", EN EL METODO "f" Y EN LA CLASE "Rec".
+    NO SE PUEDE INFERIR EL TIPO "Int" DEL PARAMETRO "b", EN EL METODO "f" Y EN LA CLASE "Rec".
+    NO SE PUEDE INFERIR EL TIPO "Int" DEL PARAMETRO "a", EN EL METODO "g" Y EN LA CLASE "Rec".
+    NO SE PUEDE INFERIR EL TIPO "Int" DEL PARAMETRO "b", EN EL METODO "g" Y EN LA CLASE "Rec".
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {
+        [method] abort() : Object ;
+        [method] type_name() : String ;
+        [method] copy() : SELF_TYPE ;
+    }
+    
+    tipo IO : Object {
+        [method] out_string(s : String) : SELF_TYPE ;
+        [method] out_int(i : Int) : SELF_TYPE ;
+        [method] in_string() : String ;
+        [method] in_int() : Int ;
+    }
+    
+    tipo Int : Object {}
+    
+    tipo String : Object {
+        [method] length() : Int ;
+        [method] concat(s : String) : String ;
+        [method] substr(pos : Int, len : Int) : String ;
+    }
+    
+    tipo Bool : Object {}
+    
+    tipo Rec : Object {
+        [method] f(a : Int, b : Int) : AUTO_TYPE ;
+        [method] g(a : Int, b : Int) : AUTO_TYPE ;
+    }
+    
+}

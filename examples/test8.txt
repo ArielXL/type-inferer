@@ -1,0 +1,226 @@
+============================ PARSER ============================
+<feature-list> -> ε
+<def-class> -> class type { <feature-list> } ;
+<feature-list> -> ε
+<def-class> -> class type inherits type { <feature-list> } ;
+<feature> -> id : type ;
+<feature> -> id : type ;
+<param> -> id : type
+<param> -> id : type
+<param-list> -> <param>
+<param-list> -> <param> , <param-list>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr> -> id <- <expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr> -> id <- <expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr-list> -> <expr> ;
+<expr-list> -> <expr> ; <expr-list>
+<expr-list> -> <expr> ; <expr-list>
+<expr> -> { <expr-list> }
+<feature> -> id ( <param-list> ) : type { <expr> } ;
+<feature-list> -> ε
+<feature-list> -> <feature> <feature-list>
+<feature-list> -> <feature> <feature-list>
+<feature-list> -> <feature> <feature-list>
+<def-class> -> class type { <feature-list> } ;
+<class-list> -> <def-class>
+<class-list> -> <def-class> <class-list>
+<class-list> -> <def-class> <class-list>
+<program> -> <class-list>
+============================= AST ==============================
+\__ProgramNode [<class> ... <class>]
+    \__ClassDeclarationNode : class A  { <feature> ... <feature> }
+
+    \__ClassDeclarationNode : class B inherits A { <feature> ... <feature> }
+
+    \__ClassDeclarationNode : class Point  { <feature> ... <feature> }
+        \__AttrDeclarationNode : x : AUTO_TYPE;
+        \__AttrDeclarationNode : y : AUTO_TYPE;
+        \__FuncDeclarationNode : init(n : Int, m : Int) : SELF_TYPE { <expr> }
+            \__BlockNode : { <expr>; ... <expr>; }
+                \__AssingNode : x <- <expr>
+                    \__IdNode : n
+                \__AssingNode : y <- <expr>
+                    \__IdNode : m
+                \__IdNode : self
+======================= COLECCIONANDO TIPOS ========================
+ERRORES : [
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {}
+    
+    tipo IO {}
+    
+    tipo Int {}
+    
+    tipo String {}
+    
+    tipo Bool {}
+    
+    tipo A {}
+    
+    tipo B {}
+    
+    tipo Point {}
+    
+}
+======================= CONSTRUYENDO TIPOS ========================
+ERRORES : [
+    ERROR!!! LINEA 1 , COLUMNA 6 : LA CLASE Main Y EL METODO main SON NECESARIOS.
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {
+        [method] abort() : Object ;
+        [method] type_name() : String ;
+        [method] copy() : SELF_TYPE ;
+    }
+    
+    tipo IO : Object {
+        [method] out_string(s : String) : SELF_TYPE ;
+        [method] out_int(i : Int) : SELF_TYPE ;
+        [method] in_string() : String ;
+        [method] in_int() : Int ;
+    }
+    
+    tipo Int : Object {}
+    
+    tipo String : Object {
+        [method] length() : Int ;
+        [method] concat(s : String) : String ;
+        [method] substr(pos : Int, len : Int) : String ;
+    }
+    
+    tipo Bool : Object {}
+    
+    tipo A : Object {}
+    
+    tipo B : A {}
+    
+    tipo Point : Object {
+        [attrib] x : AUTO_TYPE ;
+        [attrib] y : AUTO_TYPE ;
+        [method] init(n : Int, m : Int) : SELF_TYPE ;
+    }
+    
+}
+======================== CHEQUEANDO TIPOS =========================
+ERRORES : [
+    ERROR!!! LINEA 1 , COLUMNA 6 : LA CLASE Main Y EL METODO main SON NECESARIOS.
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {
+        [method] abort() : Object ;
+        [method] type_name() : String ;
+        [method] copy() : SELF_TYPE ;
+    }
+    
+    tipo IO : Object {
+        [method] out_string(s : String) : SELF_TYPE ;
+        [method] out_int(i : Int) : SELF_TYPE ;
+        [method] in_string() : String ;
+        [method] in_int() : Int ;
+    }
+    
+    tipo Int : Object {}
+    
+    tipo String : Object {
+        [method] length() : Int ;
+        [method] concat(s : String) : String ;
+        [method] substr(pos : Int, len : Int) : String ;
+    }
+    
+    tipo Bool : Object {}
+    
+    tipo A : Object {}
+    
+    tipo B : A {}
+    
+    tipo Point : Object {
+        [attrib] x : AUTO_TYPE ;
+        [attrib] y : AUTO_TYPE ;
+        [method] init(n : Int, m : Int) : SELF_TYPE ;
+    }
+    
+}
+======================== INFERENCIA DE TIPOS ========================
+INFERENCIA : [
+    NO SE PUEDE INFERIR EL TIPO "Point" DEL ATRIBUTO "x" Y EN LA CLASE "Int".
+    NO SE PUEDE INFERIR EL TIPO "Point" DEL ATRIBUTO "y" Y EN LA CLASE "Int".
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {
+        [method] abort() : Object ;
+        [method] type_name() : String ;
+        [method] copy() : SELF_TYPE ;
+    }
+    
+    tipo IO : Object {
+        [method] out_string(s : String) : SELF_TYPE ;
+        [method] out_int(i : Int) : SELF_TYPE ;
+        [method] in_string() : String ;
+        [method] in_int() : Int ;
+    }
+    
+    tipo Int : Object {}
+    
+    tipo String : Object {
+        [method] length() : Int ;
+        [method] concat(s : String) : String ;
+        [method] substr(pos : Int, len : Int) : String ;
+    }
+    
+    tipo Bool : Object {}
+    
+    tipo A : Object {}
+    
+    tipo B : A {}
+    
+    tipo Point : Object {
+        [attrib] x : Int ;
+        [attrib] y : Int ;
+        [method] init(n : Int, m : Int) : SELF_TYPE ;
+    }
+    
+}
