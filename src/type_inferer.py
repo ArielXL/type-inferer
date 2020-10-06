@@ -64,7 +64,7 @@ class MainWindow(QMainWindow):
         dlg.show()
 
     def LoadCode(self):
-        path, _ = QFileDialog.getOpenFileName(self, CARGAR_CODIGO, NULL, DOCUMENTO_COOl)
+        path, _ = QFileDialog.getOpenFileName(self, CARGAR_CODIGO, RUTA, DOCUMENTO_COOl)
 
         if not path:
             return
@@ -81,7 +81,7 @@ class MainWindow(QMainWindow):
             self.ClearResults()
 
     def SaveCode(self):
-        path, _ = QFileDialog.getSaveFileName(self, GUARDAR_CODIGO, NULL, DOCUMENTO_COOl)
+        path, _ = QFileDialog.getSaveFileName(self, GUARDAR_CODIGO, RUTA, DOCUMENTO_COOl)
         code = self.ui.textCodigoCOOL.toPlainText()
 
         if not path:
@@ -97,7 +97,7 @@ class MainWindow(QMainWindow):
             self.UpdateStatus()        
 
     def SaveResult(self):
-        path, _ = QFileDialog.getSaveFileName(self, GUARDAR_RESULTADO, NULL, DOCUMENTO_TEXTO)
+        path, _ = QFileDialog.getSaveFileName(self, GUARDAR_RESULTADO, RUTA, DOCUMENTO_TEXTO)
         result = self.ui.textResultados.toPlainText()
 
         if not path:
