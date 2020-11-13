@@ -1,0 +1,280 @@
+============================ LEXER =============================
+FILA: 1, COLUMNA: 0, TIPO: class, LEXEMA: class
+FILA: 1, COLUMNA: 6, TIPO: type, LEXEMA: A
+FILA: 1, COLUMNA: 8, TIPO: {, LEXEMA: {
+FILA: 1, COLUMNA: 10, TIPO: }, LEXEMA: }
+FILA: 1, COLUMNA: 11, TIPO: ;, LEXEMA: ;
+FILA: 2, COLUMNA: 0, TIPO: class, LEXEMA: class
+FILA: 2, COLUMNA: 6, TIPO: type, LEXEMA: B
+FILA: 2, COLUMNA: 8, TIPO: inherits, LEXEMA: inherits
+FILA: 2, COLUMNA: 17, TIPO: type, LEXEMA: A
+FILA: 2, COLUMNA: 19, TIPO: {, LEXEMA: {
+FILA: 2, COLUMNA: 21, TIPO: }, LEXEMA: }
+FILA: 2, COLUMNA: 22, TIPO: ;, LEXEMA: ;
+FILA: 4, COLUMNA: 0, TIPO: class, LEXEMA: class
+FILA: 4, COLUMNA: 6, TIPO: type, LEXEMA: Point
+FILA: 4, COLUMNA: 12, TIPO: {, LEXEMA: {
+FILA: 5, COLUMNA: 4, TIPO: id, LEXEMA: x
+FILA: 5, COLUMNA: 6, TIPO: :, LEXEMA: :
+FILA: 5, COLUMNA: 8, TIPO: type, LEXEMA: AUTO_TYPE
+FILA: 5, COLUMNA: 17, TIPO: ;, LEXEMA: ;
+FILA: 6, COLUMNA: 4, TIPO: id, LEXEMA: y
+FILA: 6, COLUMNA: 6, TIPO: :, LEXEMA: :
+FILA: 6, COLUMNA: 8, TIPO: type, LEXEMA: AUTO_TYPE
+FILA: 6, COLUMNA: 17, TIPO: ;, LEXEMA: ;
+FILA: 8, COLUMNA: 4, TIPO: id, LEXEMA: init
+FILA: 8, COLUMNA: 8, TIPO: (, LEXEMA: (
+FILA: 8, COLUMNA: 9, TIPO: id, LEXEMA: n
+FILA: 8, COLUMNA: 11, TIPO: :, LEXEMA: :
+FILA: 8, COLUMNA: 13, TIPO: type, LEXEMA: Int
+FILA: 8, COLUMNA: 16, TIPO: ,, LEXEMA: ,
+FILA: 8, COLUMNA: 18, TIPO: id, LEXEMA: m
+FILA: 8, COLUMNA: 20, TIPO: :, LEXEMA: :
+FILA: 8, COLUMNA: 22, TIPO: type, LEXEMA: Int
+FILA: 8, COLUMNA: 25, TIPO: ), LEXEMA: )
+FILA: 8, COLUMNA: 27, TIPO: :, LEXEMA: :
+FILA: 8, COLUMNA: 29, TIPO: type, LEXEMA: SELF_TYPE
+FILA: 8, COLUMNA: 39, TIPO: {, LEXEMA: {
+FILA: 9, COLUMNA: 8, TIPO: {, LEXEMA: {
+FILA: 10, COLUMNA: 12, TIPO: id, LEXEMA: x
+FILA: 10, COLUMNA: 14, TIPO: <-, LEXEMA: <-
+FILA: 10, COLUMNA: 17, TIPO: id, LEXEMA: n
+FILA: 10, COLUMNA: 18, TIPO: ;, LEXEMA: ;
+FILA: 11, COLUMNA: 12, TIPO: id, LEXEMA: y
+FILA: 11, COLUMNA: 14, TIPO: <-, LEXEMA: <-
+FILA: 11, COLUMNA: 17, TIPO: id, LEXEMA: m
+FILA: 11, COLUMNA: 18, TIPO: ;, LEXEMA: ;
+FILA: 12, COLUMNA: 12, TIPO: id, LEXEMA: self
+FILA: 12, COLUMNA: 16, TIPO: ;, LEXEMA: ;
+FILA: 13, COLUMNA: 8, TIPO: }, LEXEMA: }
+FILA: 14, COLUMNA: 4, TIPO: }, LEXEMA: }
+FILA: 14, COLUMNA: 5, TIPO: ;, LEXEMA: ;
+FILA: 15, COLUMNA: 0, TIPO: }, LEXEMA: }
+FILA: 15, COLUMNA: 1, TIPO: ;, LEXEMA: ;
+FILA: 0, COLUMNA: 0, TIPO: $, LEXEMA: $
+============================ PARSER ============================
+<feature-list> -> ε
+<def-class> -> class type { <feature-list> } ;
+<feature-list> -> ε
+<def-class> -> class type inherits type { <feature-list> } ;
+<feature> -> id : type ;
+<feature> -> id : type ;
+<param> -> id : type
+<param> -> id : type
+<param-list> -> <param>
+<param-list> -> <param> , <param-list>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr> -> id <- <expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr> -> id <- <expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr-list> -> <expr> ;
+<expr-list> -> <expr> ; <expr-list>
+<expr-list> -> <expr> ; <expr-list>
+<expr> -> { <expr-list> }
+<feature> -> id ( <param-list> ) : type { <expr> } ;
+<feature-list> -> ε
+<feature-list> -> <feature> <feature-list>
+<feature-list> -> <feature> <feature-list>
+<feature-list> -> <feature> <feature-list>
+<def-class> -> class type { <feature-list> } ;
+<class-list> -> <def-class>
+<class-list> -> <def-class> <class-list>
+<class-list> -> <def-class> <class-list>
+<program> -> <class-list>
+============================= AST ==============================
+\__ProgramNode [<class> ... <class>]
+    \__ClassDeclarationNode : class A  { <feature> ... <feature> }
+
+    \__ClassDeclarationNode : class B inherits A { <feature> ... <feature> }
+
+    \__ClassDeclarationNode : class Point  { <feature> ... <feature> }
+        \__AttrDeclarationNode : x : AUTO_TYPE;
+        \__AttrDeclarationNode : y : AUTO_TYPE;
+        \__FuncDeclarationNode : init(n : Int, m : Int) : SELF_TYPE { <expr> }
+            \__BlockNode : { <expr>; ... <expr>; }
+                \__AssingNode : x <- <expr>
+                    \__IdNode : n
+                \__AssingNode : y <- <expr>
+                    \__IdNode : m
+                \__IdNode : self
+======================= COLECCIONANDO TIPOS ========================
+ERRORES : [
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {}
+    
+    tipo IO {}
+    
+    tipo Int {}
+    
+    tipo String {}
+    
+    tipo Bool {}
+    
+    tipo A {}
+    
+    tipo B {}
+    
+    tipo Point {}
+    
+}
+======================= CONSTRUYENDO TIPOS ========================
+ERRORES : [
+    ERROR!!! LINEA 1 , COLUMNA 6 : LA CLASE Main Y EL METODO main SON NECESARIOS.
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {
+        [method] abort() : Object ;
+        [method] type_name() : String ;
+        [method] copy() : SELF_TYPE ;
+    }
+    
+    tipo IO : Object {
+        [method] out_string(s : String) : SELF_TYPE ;
+        [method] out_int(i : Int) : SELF_TYPE ;
+        [method] in_string() : String ;
+        [method] in_int() : Int ;
+    }
+    
+    tipo Int : Object {}
+    
+    tipo String : Object {
+        [method] length() : Int ;
+        [method] concat(s : String) : String ;
+        [method] substr(pos : Int, len : Int) : String ;
+    }
+    
+    tipo Bool : Object {}
+    
+    tipo A : Object {}
+    
+    tipo B : A {}
+    
+    tipo Point : Object {
+        [attribute] x : AUTO_TYPE ;
+        [attribute] y : AUTO_TYPE ;
+        [method] init(n : Int, m : Int) : SELF_TYPE ;
+    }
+    
+}
+======================== CHEQUEANDO TIPOS =========================
+ERRORES : [
+    ERROR!!! LINEA 1 , COLUMNA 6 : LA CLASE Main Y EL METODO main SON NECESARIOS.
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {
+        [method] abort() : Object ;
+        [method] type_name() : String ;
+        [method] copy() : SELF_TYPE ;
+    }
+    
+    tipo IO : Object {
+        [method] out_string(s : String) : SELF_TYPE ;
+        [method] out_int(i : Int) : SELF_TYPE ;
+        [method] in_string() : String ;
+        [method] in_int() : Int ;
+    }
+    
+    tipo Int : Object {}
+    
+    tipo String : Object {
+        [method] length() : Int ;
+        [method] concat(s : String) : String ;
+        [method] substr(pos : Int, len : Int) : String ;
+    }
+    
+    tipo Bool : Object {}
+    
+    tipo A : Object {}
+    
+    tipo B : A {}
+    
+    tipo Point : Object {
+        [attribute] x : AUTO_TYPE ;
+        [attribute] y : AUTO_TYPE ;
+        [method] init(n : Int, m : Int) : SELF_TYPE ;
+    }
+    
+}
+======================== INFERENCIA DE TIPOS ========================
+INFERENCIA : [
+    EL ATRIBUTO "x" DE LA CLASE "Int" POSEE TIPO "Point".
+    EL ATRIBUTO "y" DE LA CLASE "Int" POSEE TIPO "Point".
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {
+        [method] abort() : Object ;
+        [method] type_name() : String ;
+        [method] copy() : SELF_TYPE ;
+    }
+    
+    tipo IO : Object {
+        [method] out_string(s : String) : SELF_TYPE ;
+        [method] out_int(i : Int) : SELF_TYPE ;
+        [method] in_string() : String ;
+        [method] in_int() : Int ;
+    }
+    
+    tipo Int : Object {}
+    
+    tipo String : Object {
+        [method] length() : Int ;
+        [method] concat(s : String) : String ;
+        [method] substr(pos : Int, len : Int) : String ;
+    }
+    
+    tipo Bool : Object {}
+    
+    tipo A : Object {}
+    
+    tipo B : A {}
+    
+    tipo Point : Object {
+        [attribute] x : Int ;
+        [attribute] y : Int ;
+        [method] init(n : Int, m : Int) : SELF_TYPE ;
+    }
+    
+}

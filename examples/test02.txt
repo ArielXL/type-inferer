@@ -1,0 +1,226 @@
+============================ LEXER =============================
+FILA: 1, COLUMNA: 0, TIPO: class, LEXEMA: class
+FILA: 1, COLUMNA: 6, TIPO: type, LEXEMA: Main
+FILA: 1, COLUMNA: 11, TIPO: {, LEXEMA: {
+FILA: 3, COLUMNA: 4, TIPO: id, LEXEMA: succ
+FILA: 3, COLUMNA: 8, TIPO: (, LEXEMA: (
+FILA: 3, COLUMNA: 9, TIPO: id, LEXEMA: n
+FILA: 3, COLUMNA: 11, TIPO: :, LEXEMA: :
+FILA: 3, COLUMNA: 13, TIPO: type, LEXEMA: Int
+FILA: 3, COLUMNA: 16, TIPO: ), LEXEMA: )
+FILA: 3, COLUMNA: 18, TIPO: :, LEXEMA: :
+FILA: 3, COLUMNA: 20, TIPO: type, LEXEMA: AUTO_TYPE
+FILA: 3, COLUMNA: 30, TIPO: {, LEXEMA: {
+FILA: 3, COLUMNA: 32, TIPO: id, LEXEMA: n
+FILA: 3, COLUMNA: 34, TIPO: +, LEXEMA: +
+FILA: 3, COLUMNA: 36, TIPO: integer, LEXEMA: 1
+FILA: 3, COLUMNA: 38, TIPO: }, LEXEMA: }
+FILA: 3, COLUMNA: 39, TIPO: ;, LEXEMA: ;
+FILA: 5, COLUMNA: 4, TIPO: id, LEXEMA: succ2
+FILA: 5, COLUMNA: 9, TIPO: (, LEXEMA: (
+FILA: 5, COLUMNA: 10, TIPO: id, LEXEMA: n
+FILA: 5, COLUMNA: 12, TIPO: :, LEXEMA: :
+FILA: 5, COLUMNA: 14, TIPO: type, LEXEMA: AUTO_TYPE
+FILA: 5, COLUMNA: 23, TIPO: ), LEXEMA: )
+FILA: 5, COLUMNA: 25, TIPO: :, LEXEMA: :
+FILA: 5, COLUMNA: 27, TIPO: type, LEXEMA: AUTO_TYPE
+FILA: 5, COLUMNA: 37, TIPO: {, LEXEMA: {
+FILA: 5, COLUMNA: 39, TIPO: id, LEXEMA: n
+FILA: 5, COLUMNA: 41, TIPO: +, LEXEMA: +
+FILA: 5, COLUMNA: 43, TIPO: integer, LEXEMA: 1
+FILA: 5, COLUMNA: 45, TIPO: }, LEXEMA: }
+FILA: 5, COLUMNA: 46, TIPO: ;, LEXEMA: ;
+FILA: 6, COLUMNA: 0, TIPO: }, LEXEMA: }
+FILA: 6, COLUMNA: 1, TIPO: ;, LEXEMA: ;
+FILA: 0, COLUMNA: 0, TIPO: $, LEXEMA: $
+============================ PARSER ============================
+<param> -> id : type
+<param-list> -> <param>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <arith> + <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<feature> -> id ( <param-list> ) : type { <expr> } ;
+<param> -> id : type
+<param-list> -> <param>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <arith> + <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<feature> -> id ( <param-list> ) : type { <expr> } ;
+<feature-list> -> ε
+<feature-list> -> <feature> <feature-list>
+<feature-list> -> <feature> <feature-list>
+<def-class> -> class type { <feature-list> } ;
+<class-list> -> <def-class>
+<program> -> <class-list>
+============================= AST ==============================
+\__ProgramNode [<class> ... <class>]
+    \__ClassDeclarationNode : class Main  { <feature> ... <feature> }
+        \__FuncDeclarationNode : succ(n : Int) : AUTO_TYPE { <expr> }
+            \__<expr> PlusNode <expr>
+                \__IdNode : n
+                \__IntegerNode : 1
+        \__FuncDeclarationNode : succ2(n : AUTO_TYPE) : AUTO_TYPE { <expr> }
+            \__<expr> PlusNode <expr>
+                \__IdNode : n
+                \__IntegerNode : 1
+======================= COLECCIONANDO TIPOS ========================
+ERRORES : [
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {}
+    
+    tipo IO {}
+    
+    tipo Int {}
+    
+    tipo String {}
+    
+    tipo Bool {}
+    
+    tipo Main {}
+    
+}
+======================= CONSTRUYENDO TIPOS ========================
+ERRORES : [
+    ERROR!!! LINEA 1 , COLUMNA 6 : LA CLASE Main Y EL METODO main SON NECESARIOS.
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {
+        [method] abort() : Object ;
+        [method] type_name() : String ;
+        [method] copy() : SELF_TYPE ;
+    }
+    
+    tipo IO : Object {
+        [method] out_string(s : String) : SELF_TYPE ;
+        [method] out_int(i : Int) : SELF_TYPE ;
+        [method] in_string() : String ;
+        [method] in_int() : Int ;
+    }
+    
+    tipo Int : Object {}
+    
+    tipo String : Object {
+        [method] length() : Int ;
+        [method] concat(s : String) : String ;
+        [method] substr(pos : Int, len : Int) : String ;
+    }
+    
+    tipo Bool : Object {}
+    
+    tipo Main : Object {
+        [method] succ(n : Int) : AUTO_TYPE ;
+        [method] succ2(n : AUTO_TYPE) : AUTO_TYPE ;
+    }
+    
+}
+======================== CHEQUEANDO TIPOS =========================
+ERRORES : [
+    ERROR!!! LINEA 1 , COLUMNA 6 : LA CLASE Main Y EL METODO main SON NECESARIOS.
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {
+        [method] abort() : Object ;
+        [method] type_name() : String ;
+        [method] copy() : SELF_TYPE ;
+    }
+    
+    tipo IO : Object {
+        [method] out_string(s : String) : SELF_TYPE ;
+        [method] out_int(i : Int) : SELF_TYPE ;
+        [method] in_string() : String ;
+        [method] in_int() : Int ;
+    }
+    
+    tipo Int : Object {}
+    
+    tipo String : Object {
+        [method] length() : Int ;
+        [method] concat(s : String) : String ;
+        [method] substr(pos : Int, len : Int) : String ;
+    }
+    
+    tipo Bool : Object {}
+    
+    tipo Main : Object {
+        [method] succ(n : Int) : AUTO_TYPE ;
+        [method] succ2(n : AUTO_TYPE) : AUTO_TYPE ;
+    }
+    
+}
+======================== INFERENCIA DE TIPOS ========================
+INFERENCIA : [
+    EL METODO "succ" DE LA CLASE "Main" POSEE COMO TIPO DE RETORNO "Int".
+    EL PARAMETRO "n", EN EL METODO "succ2" Y EN LA CLASE "Main" POSEE TIPO "Int".
+    EL METODO "succ2" DE LA CLASE "Main" POSEE COMO TIPO DE RETORNO "Int".
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {
+        [method] abort() : Object ;
+        [method] type_name() : String ;
+        [method] copy() : SELF_TYPE ;
+    }
+    
+    tipo IO : Object {
+        [method] out_string(s : String) : SELF_TYPE ;
+        [method] out_int(i : Int) : SELF_TYPE ;
+        [method] in_string() : String ;
+        [method] in_int() : Int ;
+    }
+    
+    tipo Int : Object {}
+    
+    tipo String : Object {
+        [method] length() : Int ;
+        [method] concat(s : String) : String ;
+        [method] substr(pos : Int, len : Int) : String ;
+    }
+    
+    tipo Bool : Object {}
+    
+    tipo Main : Object {
+        [method] succ(n : Int) : Int ;
+        [method] succ2(n : Int) : Int ;
+    }
+    
+}

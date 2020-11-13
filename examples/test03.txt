@@ -1,0 +1,255 @@
+============================ LEXER =============================
+FILA: 1, COLUMNA: 0, TIPO: class, LEXEMA: class
+FILA: 1, COLUMNA: 6, TIPO: type, LEXEMA: Main
+FILA: 1, COLUMNA: 11, TIPO: {, LEXEMA: {
+FILA: 3, COLUMNA: 4, TIPO: id, LEXEMA: fact
+FILA: 3, COLUMNA: 8, TIPO: (, LEXEMA: (
+FILA: 3, COLUMNA: 9, TIPO: id, LEXEMA: n
+FILA: 3, COLUMNA: 11, TIPO: :, LEXEMA: :
+FILA: 3, COLUMNA: 13, TIPO: type, LEXEMA: AUTO_TYPE
+FILA: 3, COLUMNA: 22, TIPO: ), LEXEMA: )
+FILA: 3, COLUMNA: 24, TIPO: :, LEXEMA: :
+FILA: 3, COLUMNA: 26, TIPO: type, LEXEMA: AUTO_TYPE
+FILA: 3, COLUMNA: 36, TIPO: {, LEXEMA: {
+FILA: 4, COLUMNA: 8, TIPO: if, LEXEMA: if
+FILA: 4, COLUMNA: 11, TIPO: (, LEXEMA: (
+FILA: 4, COLUMNA: 12, TIPO: id, LEXEMA: n
+FILA: 4, COLUMNA: 14, TIPO: <, LEXEMA: <
+FILA: 4, COLUMNA: 16, TIPO: integer, LEXEMA: 0
+FILA: 4, COLUMNA: 17, TIPO: ), LEXEMA: )
+FILA: 4, COLUMNA: 19, TIPO: then, LEXEMA: then
+FILA: 4, COLUMNA: 24, TIPO: integer, LEXEMA: 1
+FILA: 4, COLUMNA: 26, TIPO: else, LEXEMA: else
+FILA: 4, COLUMNA: 31, TIPO: id, LEXEMA: n
+FILA: 4, COLUMNA: 33, TIPO: *, LEXEMA: *
+FILA: 4, COLUMNA: 35, TIPO: id, LEXEMA: fact
+FILA: 4, COLUMNA: 39, TIPO: (, LEXEMA: (
+FILA: 4, COLUMNA: 40, TIPO: id, LEXEMA: n
+FILA: 4, COLUMNA: 42, TIPO: -, LEXEMA: -
+FILA: 4, COLUMNA: 44, TIPO: integer, LEXEMA: 1
+FILA: 4, COLUMNA: 45, TIPO: ), LEXEMA: )
+FILA: 4, COLUMNA: 47, TIPO: fi, LEXEMA: fi
+FILA: 5, COLUMNA: 4, TIPO: }, LEXEMA: }
+FILA: 5, COLUMNA: 5, TIPO: ;, LEXEMA: ;
+FILA: 6, COLUMNA: 0, TIPO: }, LEXEMA: }
+FILA: 6, COLUMNA: 1, TIPO: ;, LEXEMA: ;
+FILA: 0, COLUMNA: 0, TIPO: $, LEXEMA: $
+============================ PARSER ============================
+<param> -> id : type
+<param-list> -> <param>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> < <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> ( <expr> )
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <arith> - <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<member-call> -> id ( <arg-list> )
+<atom> -> <member-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <term> * <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr> -> if <expr> then <expr> else <expr> fi
+<feature> -> id ( <param-list> ) : type { <expr> } ;
+<feature-list> -> ε
+<feature-list> -> <feature> <feature-list>
+<def-class> -> class type { <feature-list> } ;
+<class-list> -> <def-class>
+<program> -> <class-list>
+============================= AST ==============================
+\__ProgramNode [<class> ... <class>]
+    \__ClassDeclarationNode : class Main  { <feature> ... <feature> }
+        \__FuncDeclarationNode : fact(n : AUTO_TYPE) : AUTO_TYPE { <expr> }
+            \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                \__<expr> LessNode <expr>
+                    \__IdNode : n
+                    \__IntegerNode : 0
+                \__IntegerNode : 1
+                \__<expr> StarNode <expr>
+                    \__IdNode : n
+                    \__MemberCallNode : fact(<expr>, ..., <expr>)
+                        \__<expr> MinusNode <expr>
+                            \__IdNode : n
+                            \__IntegerNode : 1
+======================= COLECCIONANDO TIPOS ========================
+ERRORES : [
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {}
+    
+    tipo IO {}
+    
+    tipo Int {}
+    
+    tipo String {}
+    
+    tipo Bool {}
+    
+    tipo Main {}
+    
+}
+======================= CONSTRUYENDO TIPOS ========================
+ERRORES : [
+    ERROR!!! LINEA 1 , COLUMNA 6 : LA CLASE Main Y EL METODO main SON NECESARIOS.
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {
+        [method] abort() : Object ;
+        [method] type_name() : String ;
+        [method] copy() : SELF_TYPE ;
+    }
+    
+    tipo IO : Object {
+        [method] out_string(s : String) : SELF_TYPE ;
+        [method] out_int(i : Int) : SELF_TYPE ;
+        [method] in_string() : String ;
+        [method] in_int() : Int ;
+    }
+    
+    tipo Int : Object {}
+    
+    tipo String : Object {
+        [method] length() : Int ;
+        [method] concat(s : String) : String ;
+        [method] substr(pos : Int, len : Int) : String ;
+    }
+    
+    tipo Bool : Object {}
+    
+    tipo Main : Object {
+        [method] fact(n : AUTO_TYPE) : AUTO_TYPE ;
+    }
+    
+}
+======================== CHEQUEANDO TIPOS =========================
+ERRORES : [
+    ERROR!!! LINEA 1 , COLUMNA 6 : LA CLASE Main Y EL METODO main SON NECESARIOS.
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {
+        [method] abort() : Object ;
+        [method] type_name() : String ;
+        [method] copy() : SELF_TYPE ;
+    }
+    
+    tipo IO : Object {
+        [method] out_string(s : String) : SELF_TYPE ;
+        [method] out_int(i : Int) : SELF_TYPE ;
+        [method] in_string() : String ;
+        [method] in_int() : Int ;
+    }
+    
+    tipo Int : Object {}
+    
+    tipo String : Object {
+        [method] length() : Int ;
+        [method] concat(s : String) : String ;
+        [method] substr(pos : Int, len : Int) : String ;
+    }
+    
+    tipo Bool : Object {}
+    
+    tipo Main : Object {
+        [method] fact(n : AUTO_TYPE) : AUTO_TYPE ;
+    }
+    
+}
+======================== INFERENCIA DE TIPOS ========================
+INFERENCIA : [
+    EL PARAMETRO "n", EN EL METODO "fact" Y EN LA CLASE "Main" POSEE TIPO "Int".
+    EL METODO "fact" DE LA CLASE "Main" POSEE COMO TIPO DE RETORNO "Int".
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {
+        [method] abort() : Object ;
+        [method] type_name() : String ;
+        [method] copy() : SELF_TYPE ;
+    }
+    
+    tipo IO : Object {
+        [method] out_string(s : String) : SELF_TYPE ;
+        [method] out_int(i : Int) : SELF_TYPE ;
+        [method] in_string() : String ;
+        [method] in_int() : Int ;
+    }
+    
+    tipo Int : Object {}
+    
+    tipo String : Object {
+        [method] length() : Int ;
+        [method] concat(s : String) : String ;
+        [method] substr(pos : Int, len : Int) : String ;
+    }
+    
+    tipo Bool : Object {}
+    
+    tipo Main : Object {
+        [method] fact(n : Int) : Int ;
+    }
+    
+}
