@@ -17,7 +17,7 @@ class Attribute:
 
     @type_check
     def __str__(self) -> str:
-        return f'[attrib] {self.name} : {self.type.name} ;'
+        return f'[attribute] {self.name} : {self.type.name} ;'
 
     @type_check
     def __repr__(self) -> str:

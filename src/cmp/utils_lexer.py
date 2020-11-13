@@ -6,7 +6,7 @@ class Token:
         self.column = column
 
     def __str__(self):
-        return f'{self.token_type} : {self.lex}'
+        return f'FILA: {self.line}, COLUMNA: {self.column}, TIPO: {self.token_type}, LEXEMA: {self.lex}'
 
     def __repr__(self):
         return str(self)

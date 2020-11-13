@@ -42,7 +42,7 @@ class TypeInferer:
             if var.InferType():
                 self.changed = True
                 attr.type = var.type
-                self.inferences.append(INFERENCE_ATTR % (self.current_type.name, attr.name, var.type.name))
+                self.inferences.append(INFERENCE_ATTR % (attr.name, var.type.name, self.current_type.name))
 
     @visitor.when(AttrDeclarationNode)
     def visit(self, node, scope):
@@ -58,7 +58,7 @@ class TypeInferer:
             if var.InferType():
                 self.changed = True
                 attr.type = var.type
-                self.inferences.append(INFERENCE_ATTR % (self.current_type.name, attr.name, var.type.name))
+                self.inferences.append(INFERENCE_ATTR % (attr.name, var.type.name, self.current_type.name))
 
     @visitor.when(FuncDeclarationNode)
     def visit(self, node, scope):
@@ -70,7 +70,7 @@ class TypeInferer:
             if var.InferType():
                 self.changed = True
                 self.current_method.param_types[i] = var.type
-                self.inferences.append(INFERENCE_PARAMETER % (var.type.name, var.name, self.current_method.name, self.current_type.name))
+                self.inferences.append(INFERENCE_PARAMETER % (var.name, self.current_method.name, self.current_type.name, var.type.name))
                
         body_type = node.body.static_type
         var = self.current_method.return_info
@@ -79,7 +79,7 @@ class TypeInferer:
         if var.InferType():
             self.changed = True
             self.current_method.return_type = var.type
-            self.inferences.append(INFERENCE_RETURN % (var.type.name, self.current_method.name, self.current_type.name))
+            self.inferences.append(INFERENCE_RETURN % (self.current_method.name, self.current_type.name, var.type.name))
 
     @visitor.when(IfThenElseNode)
     def visit(self, node, scope, expected_type=None):
@@ -115,7 +115,7 @@ class TypeInferer:
                 if var.InferType():
                     self.changed = True
                     typex.name = var.type.name
-                    self.inferences.append(INFERENCE_ON % (idx.line, idx.column) + INFERENCE_VARIABLE % (var.type.name, var.name))
+                    self.inferences.append(INFERENCE_ON % (idx.line, idx.column) + INFERENCE_VARIABLE % (var.name, var.type.name))
 
         self.visit(node.in_body, scope.children[-1], expected_type)
 
@@ -124,7 +124,7 @@ class TypeInferer:
                 self.changed = True
                 idx, typex, _ = node.let_body[i]
                 typex.name = var.type.name
-                self.inferences.append(INFERENCE_ON % (idx.line, idx.column) + INFERENCE_VARIABLE % (var.type.name, var.name))
+                self.inferences.append(INFERENCE_ON % (idx.line, idx.column) + INFERENCE_VARIABLE % (var.name, var.type.name))
 
         node.static_type = node.in_body.static_type
 

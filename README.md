@@ -11,8 +11,8 @@ Usted podrá encontrar la especificación formal del lenguaje **COOL** en el doc
 Para lanzar la aplicación de escritorio, ejecute las siguientes instrucciones:
 
 ```bash
-$ cd src
-$ make run
+$ cd src/
+$ make visual
 ```
 
 ## Sobre la implementación

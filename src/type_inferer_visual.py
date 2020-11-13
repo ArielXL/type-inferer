@@ -64,7 +64,7 @@ class MainWindow(QMainWindow):
         dlg.show()
 
     def LoadCode(self):
-        path, _ = QFileDialog.getOpenFileName(self, CARGAR_CODIGO, RUTA, DOCUMENTO_COOl)
+        path, _ = QFileDialog.getOpenFileName(self, CARGAR_CODIGO, RUTA, DOCUMENTO_COOL)
 
         if not path:
             return
@@ -81,14 +81,14 @@ class MainWindow(QMainWindow):
             self.ClearResults()
 
     def SaveCode(self):
-        path, _ = QFileDialog.getSaveFileName(self, GUARDAR_CODIGO, RUTA, DOCUMENTO_COOl)
+        path, _ = QFileDialog.getSaveFileName(self, GUARDAR_CODIGO, RUTA, DOCUMENTO_COOL)
         code = self.ui.textCodigoCOOL.toPlainText()
 
         if not path:
             return
 
         try:
-            with open(path, WRITE) as file:
+            with open(file=path, mode=WRITE) as file:
                 file.write(code)
         except Exception as exception:
             self.dialog_critical(str(exception))
@@ -97,14 +97,14 @@ class MainWindow(QMainWindow):
             self.UpdateStatus()        
 
     def SaveResult(self):
-        path, _ = QFileDialog.getSaveFileName(self, GUARDAR_RESULTADO, RUTA, DOCUMENTO_TEXTO)
+        path, _ = QFileDialog.getSaveFileName(self, GUARDAR_RESULTADO, RUTA, RESULTADOS)
         result = self.ui.textResultados.toPlainText()
 
         if not path:
             return
 
         try:
-            with open(path, WRITE) as file:
+            with open(file=path, mode=WRITE, encoding=UTF8) as file:
                 file.write(result)
         except Exception as exception:
             self.dialog_critical(str(exception))
@@ -123,12 +123,16 @@ class MainWindow(QMainWindow):
         print(code)
 
         Utils.Print(LEXER, LENGTH_CONSOLE)
-        tokens = Tokenizer(code)
-        PrintTokens(tokens)
+        self.ui.textResultados.setPlainText(f'{self.ui.textResultados.toPlainText()}{Utils.GetString(LEXER, 64)}\n')
+        token_list = Tokenizer(code)
+        # PrintTokens(token_list)
+        tokens = '\n'.join(repr(token) for token in token_list)
+        print(tokens)
+        self.ui.textResultados.setPlainText(f'{self.ui.textResultados.toPlainText()}{tokens}\n')
 
         Utils.Print(PARSER, LENGTH_CONSOLE)
         self.ui.textResultados.setPlainText(f'{self.ui.textResultados.toPlainText()}{Utils.GetString(PARSER, 64)}\n')
-        parse, operations = CoolParser(tokens)
+        parse, operations = CoolParser(token_list)
         if not operations:
             self.ui.textResultados.setPlainText(f'{self.ui.textResultados.toPlainText()}{UNEXCEPTED_TOKEN % (parse.lex, parse.line, parse.column)}\n')
             print(UNEXCEPTED_TOKEN % (parse.lex, parse.line, parse.column))
@@ -141,7 +145,7 @@ class MainWindow(QMainWindow):
 
         Utils.Print(AST, LENGTH_CONSOLE)
         self.ui.textResultados.setPlainText(f'{self.ui.textResultados.toPlainText()}{Utils.GetString(AST, 64)}\n')
-        ast = Utils.EvaluateReverseParse(parse, operations, tokens)
+        ast = Utils.EvaluateReverseParse(parse, operations, token_list)
         formatter = FormatVisitor()
         tree = formatter.visit(ast)
         print(tree)
@@ -203,7 +207,7 @@ class MainWindow(QMainWindow):
         inferer = TypeInferer(context, errors, inferences)
         while inferer.visit(ast, scope): 
             pass
-        print('INFERENCIA : [')
+        print('INFERENCIAS : [')
         for inference in inferences:
             print(SPACE * 4, inference)
         print(']')

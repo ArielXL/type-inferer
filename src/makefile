@@ -1,8 +1,8 @@
-.PHONY: run
+.PHONY: visual
 
-run:
+visual:
 	# Corriendo Inferencia de Tipos ;)
-	python3 type_inferer.py
+	python3 type_inferer_visual.py
 
 console:
 	# Ejecutando en consola :)

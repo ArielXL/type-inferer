@@ -24,18 +24,20 @@ def Main(input_file_path : str) -> None:
     print(code)
 
     Utils.Print(LEXER, LENGTH_CONSOLE)
-    tokens = Tokenizer(code)
-    PrintTokens(tokens)
-
+    token_list = Tokenizer(code)
+    # PrintTokens(token_list)
+    tokens = '\n'.join(repr(token) for token in token_list)
+    print(tokens)
+    
     Utils.Print(PARSER, LENGTH_CONSOLE)
-    parse, operations = CoolParser(tokens)
+    parse, operations = CoolParser(token_list)
     if not operations:
         print(UNEXCEPTED_TOKEN % (parse.lex, parse.line, parse.column))
         return
     print('\n'.join(repr(x) for x in parse))
 
     Utils.Print(AST, LENGTH_CONSOLE)
-    ast = Utils.EvaluateReverseParse(parse, operations, tokens)
+    ast = Utils.EvaluateReverseParse(parse, operations, token_list)
     formatter = FormatVisitor()
     tree = formatter.visit(ast)
     print(tree)
@@ -74,7 +76,7 @@ def Main(input_file_path : str) -> None:
     inferer = TypeInferer(context, errors, inferences)
     while inferer.visit(ast, scope): 
         pass
-    print('INFERENCIA : [')
+    print('INFERENCIAS : [')
     for inference in inferences:
         print(SPACE * 4, inference)
     print(']')
