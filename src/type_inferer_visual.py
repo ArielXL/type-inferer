@@ -86,7 +86,9 @@ class MainWindow(QMainWindow):
 
         if not path:
             return
-
+        elif not path.endswith('.cl'):
+            path += '.cl'
+        
         try:
             with open(file=path, mode=WRITE) as file:
                 file.write(code)
@@ -102,6 +104,8 @@ class MainWindow(QMainWindow):
 
         if not path:
             return
+        elif not path.endswith('.txt'):
+            path += '.txt'
 
         try:
             with open(file=path, mode=WRITE, encoding=UTF8) as file:

@@ -1,0 +1,355 @@
+============================ LEXER =============================
+FILA: 1, COLUMNA: 0, TIPO: class, LEXEMA: class
+FILA: 1, COLUMNA: 6, TIPO: type, LEXEMA: Main
+FILA: 1, COLUMNA: 11, TIPO: inherits, LEXEMA: inherits
+FILA: 1, COLUMNA: 20, TIPO: type, LEXEMA: IO
+FILA: 1, COLUMNA: 23, TIPO: {, LEXEMA: {
+FILA: 3, COLUMNA: 1, TIPO: id, LEXEMA: a
+FILA: 3, COLUMNA: 2, TIPO: :, LEXEMA: :
+FILA: 3, COLUMNA: 4, TIPO: type, LEXEMA: Object
+FILA: 3, COLUMNA: 10, TIPO: ;, LEXEMA: ;
+FILA: 4, COLUMNA: 1, TIPO: id, LEXEMA: b
+FILA: 4, COLUMNA: 2, TIPO: :, LEXEMA: :
+FILA: 4, COLUMNA: 4, TIPO: type, LEXEMA: Int
+FILA: 4, COLUMNA: 7, TIPO: ;, LEXEMA: ;
+FILA: 6, COLUMNA: 1, TIPO: id, LEXEMA: main
+FILA: 6, COLUMNA: 5, TIPO: (, LEXEMA: (
+FILA: 6, COLUMNA: 6, TIPO: ), LEXEMA: )
+FILA: 6, COLUMNA: 8, TIPO: :, LEXEMA: :
+FILA: 6, COLUMNA: 10, TIPO: type, LEXEMA: Int
+FILA: 6, COLUMNA: 14, TIPO: {, LEXEMA: {
+FILA: 7, COLUMNA: 2, TIPO: {, LEXEMA: {
+FILA: 8, COLUMNA: 3, TIPO: id, LEXEMA: a
+FILA: 8, COLUMNA: 5, TIPO: <-, LEXEMA: <-
+FILA: 8, COLUMNA: 8, TIPO: id, LEXEMA: fact
+FILA: 8, COLUMNA: 12, TIPO: (, LEXEMA: (
+FILA: 8, COLUMNA: 13, TIPO: integer, LEXEMA: 0
+FILA: 8, COLUMNA: 14, TIPO: ), LEXEMA: )
+FILA: 8, COLUMNA: 15, TIPO: ;, LEXEMA: ;
+FILA: 9, COLUMNA: 3, TIPO: id, LEXEMA: b
+FILA: 9, COLUMNA: 5, TIPO: <-, LEXEMA: <-
+FILA: 9, COLUMNA: 8, TIPO: id, LEXEMA: fact
+FILA: 9, COLUMNA: 12, TIPO: (, LEXEMA: (
+FILA: 9, COLUMNA: 13, TIPO: integer, LEXEMA: 0
+FILA: 9, COLUMNA: 14, TIPO: ), LEXEMA: )
+FILA: 9, COLUMNA: 15, TIPO: ;, LEXEMA: ;
+FILA: 10, COLUMNA: 3, TIPO: integer, LEXEMA: 3
+FILA: 10, COLUMNA: 4, TIPO: ;, LEXEMA: ;
+FILA: 11, COLUMNA: 2, TIPO: }, LEXEMA: }
+FILA: 12, COLUMNA: 1, TIPO: }, LEXEMA: }
+FILA: 12, COLUMNA: 2, TIPO: ;, LEXEMA: ;
+FILA: 14, COLUMNA: 1, TIPO: id, LEXEMA: fact
+FILA: 14, COLUMNA: 5, TIPO: (, LEXEMA: (
+FILA: 14, COLUMNA: 6, TIPO: id, LEXEMA: n
+FILA: 14, COLUMNA: 7, TIPO: :, LEXEMA: :
+FILA: 14, COLUMNA: 9, TIPO: type, LEXEMA: Int
+FILA: 14, COLUMNA: 12, TIPO: ), LEXEMA: )
+FILA: 14, COLUMNA: 14, TIPO: :, LEXEMA: :
+FILA: 14, COLUMNA: 16, TIPO: type, LEXEMA: AUTO_TYPE
+FILA: 14, COLUMNA: 26, TIPO: {, LEXEMA: {
+FILA: 16, COLUMNA: 2, TIPO: if, LEXEMA: if
+FILA: 16, COLUMNA: 5, TIPO: (, LEXEMA: (
+FILA: 16, COLUMNA: 6, TIPO: id, LEXEMA: n
+FILA: 16, COLUMNA: 8, TIPO: <, LEXEMA: <
+FILA: 16, COLUMNA: 10, TIPO: integer, LEXEMA: 0
+FILA: 16, COLUMNA: 11, TIPO: ), LEXEMA: )
+FILA: 16, COLUMNA: 13, TIPO: then, LEXEMA: then
+FILA: 16, COLUMNA: 18, TIPO: integer, LEXEMA: 1
+FILA: 16, COLUMNA: 20, TIPO: else, LEXEMA: else
+FILA: 16, COLUMNA: 25, TIPO: id, LEXEMA: fact
+FILA: 16, COLUMNA: 29, TIPO: (, LEXEMA: (
+FILA: 16, COLUMNA: 30, TIPO: id, LEXEMA: n
+FILA: 16, COLUMNA: 32, TIPO: -, LEXEMA: -
+FILA: 16, COLUMNA: 34, TIPO: integer, LEXEMA: 1
+FILA: 16, COLUMNA: 35, TIPO: ), LEXEMA: )
+FILA: 16, COLUMNA: 37, TIPO: fi, LEXEMA: fi
+FILA: 18, COLUMNA: 1, TIPO: }, LEXEMA: }
+FILA: 18, COLUMNA: 2, TIPO: ;, LEXEMA: ;
+FILA: 19, COLUMNA: 0, TIPO: }, LEXEMA: }
+FILA: 19, COLUMNA: 1, TIPO: ;, LEXEMA: ;
+FILA: 0, COLUMNA: 0, TIPO: $, LEXEMA: $
+============================ PARSER ============================
+<feature> -> id : type ;
+<feature> -> id : type ;
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<member-call> -> id ( <arg-list> )
+<atom> -> <member-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr> -> id <- <expr>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<member-call> -> id ( <arg-list> )
+<atom> -> <member-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr> -> id <- <expr>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr-list> -> <expr> ;
+<expr-list> -> <expr> ; <expr-list>
+<expr-list> -> <expr> ; <expr-list>
+<expr> -> { <expr-list> }
+<feature> -> id ( ) : type { <expr> } ;
+<param> -> id : type
+<param-list> -> <param>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> < <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> ( <expr> )
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <arith> - <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<member-call> -> id ( <arg-list> )
+<atom> -> <member-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr> -> if <expr> then <expr> else <expr> fi
+<feature> -> id ( <param-list> ) : type { <expr> } ;
+<feature-list> -> ε
+<feature-list> -> <feature> <feature-list>
+<feature-list> -> <feature> <feature-list>
+<feature-list> -> <feature> <feature-list>
+<feature-list> -> <feature> <feature-list>
+<def-class> -> class type inherits type { <feature-list> } ;
+<class-list> -> <def-class>
+<program> -> <class-list>
+============================= AST ==============================
+\__ProgramNode [<class> ... <class>]
+    \__ClassDeclarationNode : class Main inherits IO { <feature> ... <feature> }
+        \__AttrDeclarationNode : a : Object;
+        \__AttrDeclarationNode : b : Int;
+        \__FuncDeclarationNode : main() : Int { <expr> }
+            \__BlockNode : { <expr>; ... <expr>; }
+                \__AssingNode : a <- <expr>
+                    \__MemberCallNode : fact(<expr>, ..., <expr>)
+                        \__IntegerNode : 0
+                \__AssingNode : b <- <expr>
+                    \__MemberCallNode : fact(<expr>, ..., <expr>)
+                        \__IntegerNode : 0
+                \__IntegerNode : 3
+        \__FuncDeclarationNode : fact(n : Int) : AUTO_TYPE { <expr> }
+            \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                \__<expr> LessNode <expr>
+                    \__IdNode : n
+                    \__IntegerNode : 0
+                \__IntegerNode : 1
+                \__MemberCallNode : fact(<expr>, ..., <expr>)
+                    \__<expr> MinusNode <expr>
+                        \__IdNode : n
+                        \__IntegerNode : 1
+======================= COLECCIONANDO TIPOS ========================
+ERRORES : [
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {}
+    
+    tipo IO {}
+    
+    tipo Int {}
+    
+    tipo String {}
+    
+    tipo Bool {}
+    
+    tipo Main {}
+    
+}
+======================= CONSTRUYENDO TIPOS ========================
+ERRORES : [
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {
+        [method] abort() : Object ;
+        [method] type_name() : String ;
+        [method] copy() : SELF_TYPE ;
+    }
+    
+    tipo IO : Object {
+        [method] out_string(s : String) : SELF_TYPE ;
+        [method] out_int(i : Int) : SELF_TYPE ;
+        [method] in_string() : String ;
+        [method] in_int() : Int ;
+    }
+    
+    tipo Int : Object {}
+    
+    tipo String : Object {
+        [method] length() : Int ;
+        [method] concat(s : String) : String ;
+        [method] substr(pos : Int, len : Int) : String ;
+    }
+    
+    tipo Bool : Object {}
+    
+    tipo Main : IO {
+        [attribute] a : Object ;
+        [attribute] b : Int ;
+        [method] main() : Int ;
+        [method] fact(n : Int) : AUTO_TYPE ;
+    }
+    
+}
+======================== CHEQUEANDO TIPOS =========================
+ERRORES : [
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {
+        [method] abort() : Object ;
+        [method] type_name() : String ;
+        [method] copy() : SELF_TYPE ;
+    }
+    
+    tipo IO : Object {
+        [method] out_string(s : String) : SELF_TYPE ;
+        [method] out_int(i : Int) : SELF_TYPE ;
+        [method] in_string() : String ;
+        [method] in_int() : Int ;
+    }
+    
+    tipo Int : Object {}
+    
+    tipo String : Object {
+        [method] length() : Int ;
+        [method] concat(s : String) : String ;
+        [method] substr(pos : Int, len : Int) : String ;
+    }
+    
+    tipo Bool : Object {}
+    
+    tipo Main : IO {
+        [attribute] a : Object ;
+        [attribute] b : Int ;
+        [method] main() : Int ;
+        [method] fact(n : Int) : AUTO_TYPE ;
+    }
+    
+}
+======================== INFERENCIA DE TIPOS ========================
+INFERENCIA : [
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {
+        [method] abort() : Object ;
+        [method] type_name() : String ;
+        [method] copy() : SELF_TYPE ;
+    }
+    
+    tipo IO : Object {
+        [method] out_string(s : String) : SELF_TYPE ;
+        [method] out_int(i : Int) : SELF_TYPE ;
+        [method] in_string() : String ;
+        [method] in_int() : Int ;
+    }
+    
+    tipo Int : Object {}
+    
+    tipo String : Object {
+        [method] length() : Int ;
+        [method] concat(s : String) : String ;
+        [method] substr(pos : Int, len : Int) : String ;
+    }
+    
+    tipo Bool : Object {}
+    
+    tipo Main : IO {
+        [attribute] a : Object ;
+        [attribute] b : Int ;
+        [method] main() : Int ;
+        [method] fact(n : Int) : AUTO_TYPE ;
+    }
+    
+}

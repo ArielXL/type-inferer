@@ -1,0 +1,2189 @@
+============================ LEXER =============================
+FILA: 1, COLUMNA: 0, TIPO: class, LEXEMA: class
+FILA: 1, COLUMNA: 6, TIPO: type, LEXEMA: JustThere
+FILA: 1, COLUMNA: 16, TIPO: {, LEXEMA: {
+FILA: 1, COLUMNA: 18, TIPO: }, LEXEMA: }
+FILA: 1, COLUMNA: 19, TIPO: ;, LEXEMA: ;
+FILA: 3, COLUMNA: 0, TIPO: class, LEXEMA: class
+FILA: 3, COLUMNA: 6, TIPO: type, LEXEMA: A2I
+FILA: 3, COLUMNA: 10, TIPO: {, LEXEMA: {
+FILA: 5, COLUMNA: 5, TIPO: id, LEXEMA: c2i
+FILA: 5, COLUMNA: 8, TIPO: (, LEXEMA: (
+FILA: 5, COLUMNA: 9, TIPO: id, LEXEMA: char
+FILA: 5, COLUMNA: 14, TIPO: :, LEXEMA: :
+FILA: 5, COLUMNA: 16, TIPO: type, LEXEMA: AUTO_TYPE
+FILA: 5, COLUMNA: 25, TIPO: ), LEXEMA: )
+FILA: 5, COLUMNA: 27, TIPO: :, LEXEMA: :
+FILA: 5, COLUMNA: 29, TIPO: type, LEXEMA: AUTO_TYPE
+FILA: 5, COLUMNA: 39, TIPO: {, LEXEMA: {
+FILA: 6, COLUMNA: 1, TIPO: if, LEXEMA: if
+FILA: 6, COLUMNA: 4, TIPO: id, LEXEMA: char
+FILA: 6, COLUMNA: 9, TIPO: =, LEXEMA: =
+FILA: 6, COLUMNA: 11, TIPO: string, LEXEMA: 0
+FILA: 6, COLUMNA: 15, TIPO: then, LEXEMA: then
+FILA: 6, COLUMNA: 20, TIPO: integer, LEXEMA: 0
+FILA: 6, COLUMNA: 22, TIPO: else, LEXEMA: else
+FILA: 7, COLUMNA: 1, TIPO: if, LEXEMA: if
+FILA: 7, COLUMNA: 4, TIPO: id, LEXEMA: char
+FILA: 7, COLUMNA: 9, TIPO: =, LEXEMA: =
+FILA: 7, COLUMNA: 11, TIPO: string, LEXEMA: 1
+FILA: 7, COLUMNA: 15, TIPO: then, LEXEMA: then
+FILA: 7, COLUMNA: 20, TIPO: integer, LEXEMA: 1
+FILA: 7, COLUMNA: 22, TIPO: else, LEXEMA: else
+FILA: 8, COLUMNA: 1, TIPO: if, LEXEMA: if
+FILA: 8, COLUMNA: 4, TIPO: id, LEXEMA: char
+FILA: 8, COLUMNA: 9, TIPO: =, LEXEMA: =
+FILA: 8, COLUMNA: 11, TIPO: string, LEXEMA: 2
+FILA: 8, COLUMNA: 15, TIPO: then, LEXEMA: then
+FILA: 8, COLUMNA: 20, TIPO: integer, LEXEMA: 2
+FILA: 8, COLUMNA: 22, TIPO: else, LEXEMA: else
+FILA: 9, COLUMNA: 8, TIPO: if, LEXEMA: if
+FILA: 9, COLUMNA: 11, TIPO: id, LEXEMA: char
+FILA: 9, COLUMNA: 16, TIPO: =, LEXEMA: =
+FILA: 9, COLUMNA: 18, TIPO: string, LEXEMA: 3
+FILA: 9, COLUMNA: 22, TIPO: then, LEXEMA: then
+FILA: 9, COLUMNA: 27, TIPO: integer, LEXEMA: 3
+FILA: 9, COLUMNA: 29, TIPO: else, LEXEMA: else
+FILA: 10, COLUMNA: 8, TIPO: if, LEXEMA: if
+FILA: 10, COLUMNA: 11, TIPO: id, LEXEMA: char
+FILA: 10, COLUMNA: 16, TIPO: =, LEXEMA: =
+FILA: 10, COLUMNA: 18, TIPO: string, LEXEMA: 4
+FILA: 10, COLUMNA: 22, TIPO: then, LEXEMA: then
+FILA: 10, COLUMNA: 27, TIPO: integer, LEXEMA: 4
+FILA: 10, COLUMNA: 29, TIPO: else, LEXEMA: else
+FILA: 11, COLUMNA: 8, TIPO: if, LEXEMA: if
+FILA: 11, COLUMNA: 11, TIPO: id, LEXEMA: char
+FILA: 11, COLUMNA: 16, TIPO: =, LEXEMA: =
+FILA: 11, COLUMNA: 18, TIPO: string, LEXEMA: 5
+FILA: 11, COLUMNA: 22, TIPO: then, LEXEMA: then
+FILA: 11, COLUMNA: 27, TIPO: integer, LEXEMA: 5
+FILA: 11, COLUMNA: 29, TIPO: else, LEXEMA: else
+FILA: 12, COLUMNA: 8, TIPO: if, LEXEMA: if
+FILA: 12, COLUMNA: 11, TIPO: id, LEXEMA: char
+FILA: 12, COLUMNA: 16, TIPO: =, LEXEMA: =
+FILA: 12, COLUMNA: 18, TIPO: string, LEXEMA: 6
+FILA: 12, COLUMNA: 22, TIPO: then, LEXEMA: then
+FILA: 12, COLUMNA: 27, TIPO: integer, LEXEMA: 6
+FILA: 12, COLUMNA: 29, TIPO: else, LEXEMA: else
+FILA: 13, COLUMNA: 8, TIPO: if, LEXEMA: if
+FILA: 13, COLUMNA: 11, TIPO: id, LEXEMA: char
+FILA: 13, COLUMNA: 16, TIPO: =, LEXEMA: =
+FILA: 13, COLUMNA: 18, TIPO: string, LEXEMA: 7
+FILA: 13, COLUMNA: 22, TIPO: then, LEXEMA: then
+FILA: 13, COLUMNA: 27, TIPO: integer, LEXEMA: 7
+FILA: 13, COLUMNA: 29, TIPO: else, LEXEMA: else
+FILA: 14, COLUMNA: 8, TIPO: if, LEXEMA: if
+FILA: 14, COLUMNA: 11, TIPO: id, LEXEMA: char
+FILA: 14, COLUMNA: 16, TIPO: =, LEXEMA: =
+FILA: 14, COLUMNA: 18, TIPO: string, LEXEMA: 8
+FILA: 14, COLUMNA: 22, TIPO: then, LEXEMA: then
+FILA: 14, COLUMNA: 27, TIPO: integer, LEXEMA: 8
+FILA: 14, COLUMNA: 29, TIPO: else, LEXEMA: else
+FILA: 15, COLUMNA: 8, TIPO: if, LEXEMA: if
+FILA: 15, COLUMNA: 11, TIPO: id, LEXEMA: char
+FILA: 15, COLUMNA: 16, TIPO: =, LEXEMA: =
+FILA: 15, COLUMNA: 18, TIPO: string, LEXEMA: 9
+FILA: 15, COLUMNA: 22, TIPO: then, LEXEMA: then
+FILA: 15, COLUMNA: 27, TIPO: integer, LEXEMA: 9
+FILA: 15, COLUMNA: 29, TIPO: else, LEXEMA: else
+FILA: 16, COLUMNA: 8, TIPO: {, LEXEMA: {
+FILA: 16, COLUMNA: 10, TIPO: id, LEXEMA: abort
+FILA: 16, COLUMNA: 15, TIPO: (, LEXEMA: (
+FILA: 16, COLUMNA: 16, TIPO: ), LEXEMA: )
+FILA: 16, COLUMNA: 17, TIPO: ;, LEXEMA: ;
+FILA: 16, COLUMNA: 19, TIPO: integer, LEXEMA: 0
+FILA: 16, COLUMNA: 20, TIPO: ;, LEXEMA: ;
+FILA: 16, COLUMNA: 22, TIPO: }, LEXEMA: }
+FILA: 17, COLUMNA: 8, TIPO: fi, LEXEMA: fi
+FILA: 17, COLUMNA: 11, TIPO: fi, LEXEMA: fi
+FILA: 17, COLUMNA: 14, TIPO: fi, LEXEMA: fi
+FILA: 17, COLUMNA: 17, TIPO: fi, LEXEMA: fi
+FILA: 17, COLUMNA: 20, TIPO: fi, LEXEMA: fi
+FILA: 17, COLUMNA: 23, TIPO: fi, LEXEMA: fi
+FILA: 17, COLUMNA: 26, TIPO: fi, LEXEMA: fi
+FILA: 17, COLUMNA: 29, TIPO: fi, LEXEMA: fi
+FILA: 17, COLUMNA: 32, TIPO: fi, LEXEMA: fi
+FILA: 17, COLUMNA: 35, TIPO: fi, LEXEMA: fi
+FILA: 18, COLUMNA: 5, TIPO: }, LEXEMA: }
+FILA: 18, COLUMNA: 6, TIPO: ;, LEXEMA: ;
+FILA: 21, COLUMNA: 5, TIPO: id, LEXEMA: i2c
+FILA: 21, COLUMNA: 8, TIPO: (, LEXEMA: (
+FILA: 21, COLUMNA: 9, TIPO: id, LEXEMA: i
+FILA: 21, COLUMNA: 11, TIPO: :, LEXEMA: :
+FILA: 21, COLUMNA: 13, TIPO: type, LEXEMA: AUTO_TYPE
+FILA: 21, COLUMNA: 22, TIPO: ), LEXEMA: )
+FILA: 21, COLUMNA: 24, TIPO: :, LEXEMA: :
+FILA: 21, COLUMNA: 26, TIPO: type, LEXEMA: AUTO_TYPE
+FILA: 21, COLUMNA: 36, TIPO: {, LEXEMA: {
+FILA: 22, COLUMNA: 1, TIPO: if, LEXEMA: if
+FILA: 22, COLUMNA: 4, TIPO: id, LEXEMA: i
+FILA: 22, COLUMNA: 6, TIPO: =, LEXEMA: =
+FILA: 22, COLUMNA: 8, TIPO: integer, LEXEMA: 0
+FILA: 22, COLUMNA: 10, TIPO: then, LEXEMA: then
+FILA: 22, COLUMNA: 15, TIPO: string, LEXEMA: 0
+FILA: 22, COLUMNA: 19, TIPO: else, LEXEMA: else
+FILA: 23, COLUMNA: 1, TIPO: if, LEXEMA: if
+FILA: 23, COLUMNA: 4, TIPO: id, LEXEMA: i
+FILA: 23, COLUMNA: 6, TIPO: =, LEXEMA: =
+FILA: 23, COLUMNA: 8, TIPO: integer, LEXEMA: 1
+FILA: 23, COLUMNA: 10, TIPO: then, LEXEMA: then
+FILA: 23, COLUMNA: 15, TIPO: string, LEXEMA: 1
+FILA: 23, COLUMNA: 19, TIPO: else, LEXEMA: else
+FILA: 24, COLUMNA: 1, TIPO: if, LEXEMA: if
+FILA: 24, COLUMNA: 4, TIPO: id, LEXEMA: i
+FILA: 24, COLUMNA: 6, TIPO: =, LEXEMA: =
+FILA: 24, COLUMNA: 8, TIPO: integer, LEXEMA: 2
+FILA: 24, COLUMNA: 10, TIPO: then, LEXEMA: then
+FILA: 24, COLUMNA: 15, TIPO: string, LEXEMA: 2
+FILA: 24, COLUMNA: 19, TIPO: else, LEXEMA: else
+FILA: 25, COLUMNA: 1, TIPO: if, LEXEMA: if
+FILA: 25, COLUMNA: 4, TIPO: id, LEXEMA: i
+FILA: 25, COLUMNA: 6, TIPO: =, LEXEMA: =
+FILA: 25, COLUMNA: 8, TIPO: integer, LEXEMA: 3
+FILA: 25, COLUMNA: 10, TIPO: then, LEXEMA: then
+FILA: 25, COLUMNA: 15, TIPO: string, LEXEMA: 3
+FILA: 25, COLUMNA: 19, TIPO: else, LEXEMA: else
+FILA: 26, COLUMNA: 1, TIPO: if, LEXEMA: if
+FILA: 26, COLUMNA: 4, TIPO: id, LEXEMA: i
+FILA: 26, COLUMNA: 6, TIPO: =, LEXEMA: =
+FILA: 26, COLUMNA: 8, TIPO: integer, LEXEMA: 4
+FILA: 26, COLUMNA: 10, TIPO: then, LEXEMA: then
+FILA: 26, COLUMNA: 15, TIPO: string, LEXEMA: 4
+FILA: 26, COLUMNA: 19, TIPO: else, LEXEMA: else
+FILA: 27, COLUMNA: 1, TIPO: if, LEXEMA: if
+FILA: 27, COLUMNA: 4, TIPO: id, LEXEMA: i
+FILA: 27, COLUMNA: 6, TIPO: =, LEXEMA: =
+FILA: 27, COLUMNA: 8, TIPO: integer, LEXEMA: 5
+FILA: 27, COLUMNA: 10, TIPO: then, LEXEMA: then
+FILA: 27, COLUMNA: 15, TIPO: string, LEXEMA: 5
+FILA: 27, COLUMNA: 19, TIPO: else, LEXEMA: else
+FILA: 28, COLUMNA: 1, TIPO: if, LEXEMA: if
+FILA: 28, COLUMNA: 4, TIPO: id, LEXEMA: i
+FILA: 28, COLUMNA: 6, TIPO: =, LEXEMA: =
+FILA: 28, COLUMNA: 8, TIPO: integer, LEXEMA: 6
+FILA: 28, COLUMNA: 10, TIPO: then, LEXEMA: then
+FILA: 28, COLUMNA: 15, TIPO: string, LEXEMA: 6
+FILA: 28, COLUMNA: 19, TIPO: else, LEXEMA: else
+FILA: 29, COLUMNA: 1, TIPO: if, LEXEMA: if
+FILA: 29, COLUMNA: 4, TIPO: id, LEXEMA: i
+FILA: 29, COLUMNA: 6, TIPO: =, LEXEMA: =
+FILA: 29, COLUMNA: 8, TIPO: integer, LEXEMA: 7
+FILA: 29, COLUMNA: 10, TIPO: then, LEXEMA: then
+FILA: 29, COLUMNA: 15, TIPO: string, LEXEMA: 7
+FILA: 29, COLUMNA: 19, TIPO: else, LEXEMA: else
+FILA: 30, COLUMNA: 1, TIPO: if, LEXEMA: if
+FILA: 30, COLUMNA: 4, TIPO: id, LEXEMA: i
+FILA: 30, COLUMNA: 6, TIPO: =, LEXEMA: =
+FILA: 30, COLUMNA: 8, TIPO: integer, LEXEMA: 8
+FILA: 30, COLUMNA: 10, TIPO: then, LEXEMA: then
+FILA: 30, COLUMNA: 15, TIPO: string, LEXEMA: 8
+FILA: 30, COLUMNA: 19, TIPO: else, LEXEMA: else
+FILA: 31, COLUMNA: 1, TIPO: if, LEXEMA: if
+FILA: 31, COLUMNA: 4, TIPO: id, LEXEMA: i
+FILA: 31, COLUMNA: 6, TIPO: =, LEXEMA: =
+FILA: 31, COLUMNA: 8, TIPO: integer, LEXEMA: 9
+FILA: 31, COLUMNA: 10, TIPO: then, LEXEMA: then
+FILA: 31, COLUMNA: 15, TIPO: string, LEXEMA: 9
+FILA: 31, COLUMNA: 19, TIPO: else, LEXEMA: else
+FILA: 32, COLUMNA: 1, TIPO: {, LEXEMA: {
+FILA: 32, COLUMNA: 3, TIPO: id, LEXEMA: abort
+FILA: 32, COLUMNA: 8, TIPO: (, LEXEMA: (
+FILA: 32, COLUMNA: 9, TIPO: ), LEXEMA: )
+FILA: 32, COLUMNA: 10, TIPO: ;, LEXEMA: ;
+FILA: 32, COLUMNA: 12, TIPO: string, LEXEMA: 
+FILA: 32, COLUMNA: 14, TIPO: ;, LEXEMA: ;
+FILA: 32, COLUMNA: 16, TIPO: }, LEXEMA: }
+FILA: 33, COLUMNA: 8, TIPO: fi, LEXEMA: fi
+FILA: 33, COLUMNA: 11, TIPO: fi, LEXEMA: fi
+FILA: 33, COLUMNA: 14, TIPO: fi, LEXEMA: fi
+FILA: 33, COLUMNA: 17, TIPO: fi, LEXEMA: fi
+FILA: 33, COLUMNA: 20, TIPO: fi, LEXEMA: fi
+FILA: 33, COLUMNA: 23, TIPO: fi, LEXEMA: fi
+FILA: 33, COLUMNA: 26, TIPO: fi, LEXEMA: fi
+FILA: 33, COLUMNA: 29, TIPO: fi, LEXEMA: fi
+FILA: 33, COLUMNA: 32, TIPO: fi, LEXEMA: fi
+FILA: 33, COLUMNA: 35, TIPO: fi, LEXEMA: fi
+FILA: 34, COLUMNA: 5, TIPO: }, LEXEMA: }
+FILA: 34, COLUMNA: 6, TIPO: ;, LEXEMA: ;
+FILA: 36, COLUMNA: 5, TIPO: id, LEXEMA: a2i
+FILA: 36, COLUMNA: 8, TIPO: (, LEXEMA: (
+FILA: 36, COLUMNA: 9, TIPO: id, LEXEMA: s
+FILA: 36, COLUMNA: 11, TIPO: :, LEXEMA: :
+FILA: 36, COLUMNA: 13, TIPO: type, LEXEMA: AUTO_TYPE
+FILA: 36, COLUMNA: 22, TIPO: ), LEXEMA: )
+FILA: 36, COLUMNA: 24, TIPO: :, LEXEMA: :
+FILA: 36, COLUMNA: 26, TIPO: type, LEXEMA: AUTO_TYPE
+FILA: 36, COLUMNA: 36, TIPO: {, LEXEMA: {
+FILA: 37, COLUMNA: 8, TIPO: if, LEXEMA: if
+FILA: 37, COLUMNA: 11, TIPO: id, LEXEMA: s
+FILA: 37, COLUMNA: 12, TIPO: ., LEXEMA: .
+FILA: 37, COLUMNA: 13, TIPO: id, LEXEMA: length
+FILA: 37, COLUMNA: 19, TIPO: (, LEXEMA: (
+FILA: 37, COLUMNA: 20, TIPO: ), LEXEMA: )
+FILA: 37, COLUMNA: 22, TIPO: =, LEXEMA: =
+FILA: 37, COLUMNA: 24, TIPO: integer, LEXEMA: 0
+FILA: 37, COLUMNA: 26, TIPO: then, LEXEMA: then
+FILA: 37, COLUMNA: 31, TIPO: integer, LEXEMA: 0
+FILA: 37, COLUMNA: 33, TIPO: else, LEXEMA: else
+FILA: 38, COLUMNA: 1, TIPO: if, LEXEMA: if
+FILA: 38, COLUMNA: 4, TIPO: id, LEXEMA: s
+FILA: 38, COLUMNA: 5, TIPO: ., LEXEMA: .
+FILA: 38, COLUMNA: 6, TIPO: id, LEXEMA: substr
+FILA: 38, COLUMNA: 12, TIPO: (, LEXEMA: (
+FILA: 38, COLUMNA: 13, TIPO: integer, LEXEMA: 0
+FILA: 38, COLUMNA: 14, TIPO: ,, LEXEMA: ,
+FILA: 38, COLUMNA: 15, TIPO: integer, LEXEMA: 1
+FILA: 38, COLUMNA: 16, TIPO: ), LEXEMA: )
+FILA: 38, COLUMNA: 18, TIPO: =, LEXEMA: =
+FILA: 38, COLUMNA: 20, TIPO: string, LEXEMA: -
+FILA: 38, COLUMNA: 24, TIPO: then, LEXEMA: then
+FILA: 38, COLUMNA: 29, TIPO: ~, LEXEMA: ~
+FILA: 38, COLUMNA: 30, TIPO: id, LEXEMA: a2i_aux
+FILA: 38, COLUMNA: 37, TIPO: (, LEXEMA: (
+FILA: 38, COLUMNA: 38, TIPO: id, LEXEMA: s
+FILA: 38, COLUMNA: 39, TIPO: ., LEXEMA: .
+FILA: 38, COLUMNA: 40, TIPO: id, LEXEMA: substr
+FILA: 38, COLUMNA: 46, TIPO: (, LEXEMA: (
+FILA: 38, COLUMNA: 47, TIPO: integer, LEXEMA: 1
+FILA: 38, COLUMNA: 48, TIPO: ,, LEXEMA: ,
+FILA: 38, COLUMNA: 49, TIPO: id, LEXEMA: s
+FILA: 38, COLUMNA: 50, TIPO: ., LEXEMA: .
+FILA: 38, COLUMNA: 51, TIPO: id, LEXEMA: length
+FILA: 38, COLUMNA: 57, TIPO: (, LEXEMA: (
+FILA: 38, COLUMNA: 58, TIPO: ), LEXEMA: )
+FILA: 38, COLUMNA: 59, TIPO: -, LEXEMA: -
+FILA: 38, COLUMNA: 60, TIPO: integer, LEXEMA: 1
+FILA: 38, COLUMNA: 61, TIPO: ), LEXEMA: )
+FILA: 38, COLUMNA: 62, TIPO: ), LEXEMA: )
+FILA: 38, COLUMNA: 64, TIPO: else, LEXEMA: else
+FILA: 39, COLUMNA: 8, TIPO: if, LEXEMA: if
+FILA: 39, COLUMNA: 11, TIPO: id, LEXEMA: s
+FILA: 39, COLUMNA: 12, TIPO: ., LEXEMA: .
+FILA: 39, COLUMNA: 13, TIPO: id, LEXEMA: substr
+FILA: 39, COLUMNA: 19, TIPO: (, LEXEMA: (
+FILA: 39, COLUMNA: 20, TIPO: integer, LEXEMA: 0
+FILA: 39, COLUMNA: 21, TIPO: ,, LEXEMA: ,
+FILA: 39, COLUMNA: 22, TIPO: integer, LEXEMA: 1
+FILA: 39, COLUMNA: 23, TIPO: ), LEXEMA: )
+FILA: 39, COLUMNA: 25, TIPO: =, LEXEMA: =
+FILA: 39, COLUMNA: 27, TIPO: string, LEXEMA: +
+FILA: 39, COLUMNA: 31, TIPO: then, LEXEMA: then
+FILA: 39, COLUMNA: 36, TIPO: id, LEXEMA: a2i_aux
+FILA: 39, COLUMNA: 43, TIPO: (, LEXEMA: (
+FILA: 39, COLUMNA: 44, TIPO: id, LEXEMA: s
+FILA: 39, COLUMNA: 45, TIPO: ., LEXEMA: .
+FILA: 39, COLUMNA: 46, TIPO: id, LEXEMA: substr
+FILA: 39, COLUMNA: 52, TIPO: (, LEXEMA: (
+FILA: 39, COLUMNA: 53, TIPO: integer, LEXEMA: 1
+FILA: 39, COLUMNA: 54, TIPO: ,, LEXEMA: ,
+FILA: 39, COLUMNA: 55, TIPO: id, LEXEMA: s
+FILA: 39, COLUMNA: 56, TIPO: ., LEXEMA: .
+FILA: 39, COLUMNA: 57, TIPO: id, LEXEMA: length
+FILA: 39, COLUMNA: 63, TIPO: (, LEXEMA: (
+FILA: 39, COLUMNA: 64, TIPO: ), LEXEMA: )
+FILA: 39, COLUMNA: 65, TIPO: -, LEXEMA: -
+FILA: 39, COLUMNA: 66, TIPO: integer, LEXEMA: 1
+FILA: 39, COLUMNA: 67, TIPO: ), LEXEMA: )
+FILA: 39, COLUMNA: 68, TIPO: ), LEXEMA: )
+FILA: 39, COLUMNA: 70, TIPO: else, LEXEMA: else
+FILA: 40, COLUMNA: 11, TIPO: id, LEXEMA: a2i_aux
+FILA: 40, COLUMNA: 18, TIPO: (, LEXEMA: (
+FILA: 40, COLUMNA: 19, TIPO: id, LEXEMA: s
+FILA: 40, COLUMNA: 20, TIPO: ), LEXEMA: )
+FILA: 41, COLUMNA: 8, TIPO: fi, LEXEMA: fi
+FILA: 41, COLUMNA: 11, TIPO: fi, LEXEMA: fi
+FILA: 41, COLUMNA: 14, TIPO: fi, LEXEMA: fi
+FILA: 42, COLUMNA: 5, TIPO: }, LEXEMA: }
+FILA: 42, COLUMNA: 6, TIPO: ;, LEXEMA: ;
+FILA: 44, COLUMNA: 5, TIPO: id, LEXEMA: a2i_aux
+FILA: 44, COLUMNA: 12, TIPO: (, LEXEMA: (
+FILA: 44, COLUMNA: 13, TIPO: id, LEXEMA: s
+FILA: 44, COLUMNA: 15, TIPO: :, LEXEMA: :
+FILA: 44, COLUMNA: 17, TIPO: type, LEXEMA: AUTO_TYPE
+FILA: 44, COLUMNA: 26, TIPO: ), LEXEMA: )
+FILA: 44, COLUMNA: 28, TIPO: :, LEXEMA: :
+FILA: 44, COLUMNA: 30, TIPO: type, LEXEMA: AUTO_TYPE
+FILA: 44, COLUMNA: 40, TIPO: {, LEXEMA: {
+FILA: 45, COLUMNA: 1, TIPO: (, LEXEMA: (
+FILA: 45, COLUMNA: 2, TIPO: let, LEXEMA: let
+FILA: 45, COLUMNA: 6, TIPO: id, LEXEMA: int
+FILA: 45, COLUMNA: 10, TIPO: :, LEXEMA: :
+FILA: 45, COLUMNA: 12, TIPO: type, LEXEMA: AUTO_TYPE
+FILA: 45, COLUMNA: 22, TIPO: <-, LEXEMA: <-
+FILA: 45, COLUMNA: 25, TIPO: integer, LEXEMA: 0
+FILA: 45, COLUMNA: 27, TIPO: in, LEXEMA: in
+FILA: 46, COLUMNA: 11, TIPO: {, LEXEMA: {
+FILA: 47, COLUMNA: 15, TIPO: (, LEXEMA: (
+FILA: 47, COLUMNA: 16, TIPO: let, LEXEMA: let
+FILA: 47, COLUMNA: 20, TIPO: id, LEXEMA: j
+FILA: 47, COLUMNA: 22, TIPO: :, LEXEMA: :
+FILA: 47, COLUMNA: 24, TIPO: type, LEXEMA: AUTO_TYPE
+FILA: 47, COLUMNA: 34, TIPO: <-, LEXEMA: <-
+FILA: 47, COLUMNA: 37, TIPO: id, LEXEMA: s
+FILA: 47, COLUMNA: 38, TIPO: ., LEXEMA: .
+FILA: 47, COLUMNA: 39, TIPO: id, LEXEMA: length
+FILA: 47, COLUMNA: 45, TIPO: (, LEXEMA: (
+FILA: 47, COLUMNA: 46, TIPO: ), LEXEMA: )
+FILA: 47, COLUMNA: 48, TIPO: in, LEXEMA: in
+FILA: 48, COLUMNA: 11, TIPO: (, LEXEMA: (
+FILA: 48, COLUMNA: 12, TIPO: let, LEXEMA: let
+FILA: 48, COLUMNA: 16, TIPO: id, LEXEMA: i
+FILA: 48, COLUMNA: 18, TIPO: :, LEXEMA: :
+FILA: 48, COLUMNA: 20, TIPO: type, LEXEMA: AUTO_TYPE
+FILA: 48, COLUMNA: 30, TIPO: <-, LEXEMA: <-
+FILA: 48, COLUMNA: 33, TIPO: integer, LEXEMA: 0
+FILA: 48, COLUMNA: 35, TIPO: in, LEXEMA: in
+FILA: 49, COLUMNA: 6, TIPO: while, LEXEMA: while
+FILA: 49, COLUMNA: 12, TIPO: id, LEXEMA: i
+FILA: 49, COLUMNA: 14, TIPO: <, LEXEMA: <
+FILA: 49, COLUMNA: 16, TIPO: id, LEXEMA: j
+FILA: 49, COLUMNA: 18, TIPO: loop, LEXEMA: loop
+FILA: 50, COLUMNA: 3, TIPO: {, LEXEMA: {
+FILA: 51, COLUMNA: 7, TIPO: id, LEXEMA: int
+FILA: 51, COLUMNA: 11, TIPO: <-, LEXEMA: <-
+FILA: 51, COLUMNA: 14, TIPO: id, LEXEMA: int
+FILA: 51, COLUMNA: 18, TIPO: *, LEXEMA: *
+FILA: 51, COLUMNA: 20, TIPO: integer, LEXEMA: 10
+FILA: 51, COLUMNA: 23, TIPO: +, LEXEMA: +
+FILA: 51, COLUMNA: 25, TIPO: id, LEXEMA: c2i
+FILA: 51, COLUMNA: 28, TIPO: (, LEXEMA: (
+FILA: 51, COLUMNA: 29, TIPO: id, LEXEMA: s
+FILA: 51, COLUMNA: 30, TIPO: ., LEXEMA: .
+FILA: 51, COLUMNA: 31, TIPO: id, LEXEMA: substr
+FILA: 51, COLUMNA: 37, TIPO: (, LEXEMA: (
+FILA: 51, COLUMNA: 38, TIPO: id, LEXEMA: i
+FILA: 51, COLUMNA: 39, TIPO: ,, LEXEMA: ,
+FILA: 51, COLUMNA: 40, TIPO: integer, LEXEMA: 1
+FILA: 51, COLUMNA: 41, TIPO: ), LEXEMA: )
+FILA: 51, COLUMNA: 42, TIPO: ), LEXEMA: )
+FILA: 51, COLUMNA: 43, TIPO: ;, LEXEMA: ;
+FILA: 52, COLUMNA: 7, TIPO: id, LEXEMA: i
+FILA: 52, COLUMNA: 9, TIPO: <-, LEXEMA: <-
+FILA: 52, COLUMNA: 12, TIPO: id, LEXEMA: i
+FILA: 52, COLUMNA: 14, TIPO: +, LEXEMA: +
+FILA: 52, COLUMNA: 16, TIPO: integer, LEXEMA: 1
+FILA: 52, COLUMNA: 17, TIPO: ;, LEXEMA: ;
+FILA: 53, COLUMNA: 3, TIPO: }, LEXEMA: }
+FILA: 54, COLUMNA: 6, TIPO: pool, LEXEMA: pool
+FILA: 55, COLUMNA: 4, TIPO: ), LEXEMA: )
+FILA: 56, COLUMNA: 8, TIPO: ), LEXEMA: )
+FILA: 56, COLUMNA: 9, TIPO: ;, LEXEMA: ;
+FILA: 57, COLUMNA: 14, TIPO: id, LEXEMA: int
+FILA: 57, COLUMNA: 17, TIPO: ;, LEXEMA: ;
+FILA: 58, COLUMNA: 5, TIPO: }, LEXEMA: }
+FILA: 59, COLUMNA: 8, TIPO: ), LEXEMA: )
+FILA: 60, COLUMNA: 5, TIPO: }, LEXEMA: }
+FILA: 60, COLUMNA: 6, TIPO: ;, LEXEMA: ;
+FILA: 62, COLUMNA: 4, TIPO: id, LEXEMA: i2a
+FILA: 62, COLUMNA: 7, TIPO: (, LEXEMA: (
+FILA: 62, COLUMNA: 8, TIPO: id, LEXEMA: i
+FILA: 62, COLUMNA: 10, TIPO: :, LEXEMA: :
+FILA: 62, COLUMNA: 12, TIPO: type, LEXEMA: AUTO_TYPE
+FILA: 62, COLUMNA: 21, TIPO: ), LEXEMA: )
+FILA: 62, COLUMNA: 23, TIPO: :, LEXEMA: :
+FILA: 62, COLUMNA: 25, TIPO: type, LEXEMA: AUTO_TYPE
+FILA: 62, COLUMNA: 35, TIPO: {, LEXEMA: {
+FILA: 63, COLUMNA: 1, TIPO: if, LEXEMA: if
+FILA: 63, COLUMNA: 4, TIPO: id, LEXEMA: i
+FILA: 63, COLUMNA: 6, TIPO: =, LEXEMA: =
+FILA: 63, COLUMNA: 8, TIPO: integer, LEXEMA: 0
+FILA: 63, COLUMNA: 10, TIPO: then, LEXEMA: then
+FILA: 63, COLUMNA: 15, TIPO: string, LEXEMA: 0
+FILA: 63, COLUMNA: 19, TIPO: else, LEXEMA: else
+FILA: 64, COLUMNA: 8, TIPO: if, LEXEMA: if
+FILA: 64, COLUMNA: 11, TIPO: integer, LEXEMA: 0
+FILA: 64, COLUMNA: 13, TIPO: <, LEXEMA: <
+FILA: 64, COLUMNA: 15, TIPO: id, LEXEMA: i
+FILA: 64, COLUMNA: 17, TIPO: then, LEXEMA: then
+FILA: 64, COLUMNA: 22, TIPO: id, LEXEMA: i2a_aux
+FILA: 64, COLUMNA: 29, TIPO: (, LEXEMA: (
+FILA: 64, COLUMNA: 30, TIPO: id, LEXEMA: i
+FILA: 64, COLUMNA: 31, TIPO: ), LEXEMA: )
+FILA: 64, COLUMNA: 33, TIPO: else, LEXEMA: else
+FILA: 65, COLUMNA: 10, TIPO: string, LEXEMA: -
+FILA: 65, COLUMNA: 13, TIPO: ., LEXEMA: .
+FILA: 65, COLUMNA: 14, TIPO: id, LEXEMA: concat
+FILA: 65, COLUMNA: 20, TIPO: (, LEXEMA: (
+FILA: 65, COLUMNA: 21, TIPO: id, LEXEMA: i2a_aux
+FILA: 65, COLUMNA: 28, TIPO: (, LEXEMA: (
+FILA: 65, COLUMNA: 29, TIPO: id, LEXEMA: i
+FILA: 65, COLUMNA: 31, TIPO: *, LEXEMA: *
+FILA: 65, COLUMNA: 33, TIPO: ~, LEXEMA: ~
+FILA: 65, COLUMNA: 34, TIPO: integer, LEXEMA: 1
+FILA: 65, COLUMNA: 35, TIPO: ), LEXEMA: )
+FILA: 65, COLUMNA: 36, TIPO: ), LEXEMA: )
+FILA: 66, COLUMNA: 8, TIPO: fi, LEXEMA: fi
+FILA: 66, COLUMNA: 11, TIPO: fi, LEXEMA: fi
+FILA: 67, COLUMNA: 4, TIPO: }, LEXEMA: }
+FILA: 67, COLUMNA: 5, TIPO: ;, LEXEMA: ;
+FILA: 70, COLUMNA: 4, TIPO: id, LEXEMA: i2a_aux
+FILA: 70, COLUMNA: 11, TIPO: (, LEXEMA: (
+FILA: 70, COLUMNA: 12, TIPO: id, LEXEMA: i
+FILA: 70, COLUMNA: 14, TIPO: :, LEXEMA: :
+FILA: 70, COLUMNA: 16, TIPO: type, LEXEMA: AUTO_TYPE
+FILA: 70, COLUMNA: 25, TIPO: ), LEXEMA: )
+FILA: 70, COLUMNA: 27, TIPO: :, LEXEMA: :
+FILA: 70, COLUMNA: 29, TIPO: type, LEXEMA: AUTO_TYPE
+FILA: 70, COLUMNA: 39, TIPO: {, LEXEMA: {
+FILA: 71, COLUMNA: 8, TIPO: if, LEXEMA: if
+FILA: 71, COLUMNA: 11, TIPO: id, LEXEMA: i
+FILA: 71, COLUMNA: 13, TIPO: =, LEXEMA: =
+FILA: 71, COLUMNA: 15, TIPO: integer, LEXEMA: 0
+FILA: 71, COLUMNA: 17, TIPO: then, LEXEMA: then
+FILA: 71, COLUMNA: 22, TIPO: string, LEXEMA: 
+FILA: 71, COLUMNA: 25, TIPO: else, LEXEMA: else
+FILA: 72, COLUMNA: 5, TIPO: (, LEXEMA: (
+FILA: 72, COLUMNA: 6, TIPO: let, LEXEMA: let
+FILA: 72, COLUMNA: 10, TIPO: id, LEXEMA: next
+FILA: 72, COLUMNA: 15, TIPO: :, LEXEMA: :
+FILA: 72, COLUMNA: 17, TIPO: type, LEXEMA: AUTO_TYPE
+FILA: 72, COLUMNA: 27, TIPO: <-, LEXEMA: <-
+FILA: 72, COLUMNA: 30, TIPO: id, LEXEMA: i
+FILA: 72, COLUMNA: 32, TIPO: /, LEXEMA: /
+FILA: 72, COLUMNA: 34, TIPO: integer, LEXEMA: 10
+FILA: 72, COLUMNA: 37, TIPO: in, LEXEMA: in
+FILA: 73, COLUMNA: 2, TIPO: id, LEXEMA: i2a_aux
+FILA: 73, COLUMNA: 9, TIPO: (, LEXEMA: (
+FILA: 73, COLUMNA: 10, TIPO: id, LEXEMA: next
+FILA: 73, COLUMNA: 14, TIPO: ), LEXEMA: )
+FILA: 73, COLUMNA: 15, TIPO: ., LEXEMA: .
+FILA: 73, COLUMNA: 16, TIPO: id, LEXEMA: concat
+FILA: 73, COLUMNA: 22, TIPO: (, LEXEMA: (
+FILA: 73, COLUMNA: 23, TIPO: id, LEXEMA: i2c
+FILA: 73, COLUMNA: 26, TIPO: (, LEXEMA: (
+FILA: 73, COLUMNA: 27, TIPO: id, LEXEMA: i
+FILA: 73, COLUMNA: 29, TIPO: -, LEXEMA: -
+FILA: 73, COLUMNA: 31, TIPO: id, LEXEMA: next
+FILA: 73, COLUMNA: 36, TIPO: *, LEXEMA: *
+FILA: 73, COLUMNA: 38, TIPO: integer, LEXEMA: 10
+FILA: 73, COLUMNA: 40, TIPO: ), LEXEMA: )
+FILA: 73, COLUMNA: 41, TIPO: ), LEXEMA: )
+FILA: 74, COLUMNA: 5, TIPO: ), LEXEMA: )
+FILA: 75, COLUMNA: 8, TIPO: fi, LEXEMA: fi
+FILA: 76, COLUMNA: 4, TIPO: }, LEXEMA: }
+FILA: 76, COLUMNA: 5, TIPO: ;, LEXEMA: ;
+FILA: 78, COLUMNA: 0, TIPO: }, LEXEMA: }
+FILA: 78, COLUMNA: 1, TIPO: ;, LEXEMA: ;
+FILA: 80, COLUMNA: 0, TIPO: class, LEXEMA: class
+FILA: 80, COLUMNA: 6, TIPO: type, LEXEMA: Main
+FILA: 80, COLUMNA: 11, TIPO: inherits, LEXEMA: inherits
+FILA: 80, COLUMNA: 20, TIPO: type, LEXEMA: IO
+FILA: 80, COLUMNA: 23, TIPO: {, LEXEMA: {
+FILA: 81, COLUMNA: 2, TIPO: id, LEXEMA: main
+FILA: 81, COLUMNA: 7, TIPO: (, LEXEMA: (
+FILA: 81, COLUMNA: 8, TIPO: ), LEXEMA: )
+FILA: 81, COLUMNA: 10, TIPO: :, LEXEMA: :
+FILA: 81, COLUMNA: 12, TIPO: type, LEXEMA: AUTO_TYPE
+FILA: 81, COLUMNA: 22, TIPO: {, LEXEMA: {
+FILA: 82, COLUMNA: 6, TIPO: let, LEXEMA: let
+FILA: 82, COLUMNA: 10, TIPO: id, LEXEMA: a
+FILA: 82, COLUMNA: 12, TIPO: :, LEXEMA: :
+FILA: 82, COLUMNA: 14, TIPO: type, LEXEMA: AUTO_TYPE
+FILA: 82, COLUMNA: 24, TIPO: <-, LEXEMA: <-
+FILA: 82, COLUMNA: 27, TIPO: (, LEXEMA: (
+FILA: 82, COLUMNA: 28, TIPO: new, LEXEMA: new
+FILA: 82, COLUMNA: 32, TIPO: type, LEXEMA: A2I
+FILA: 82, COLUMNA: 35, TIPO: ), LEXEMA: )
+FILA: 82, COLUMNA: 36, TIPO: ., LEXEMA: .
+FILA: 82, COLUMNA: 37, TIPO: id, LEXEMA: a2i
+FILA: 82, COLUMNA: 40, TIPO: (, LEXEMA: (
+FILA: 82, COLUMNA: 41, TIPO: string, LEXEMA: 678987
+FILA: 82, COLUMNA: 49, TIPO: ), LEXEMA: )
+FILA: 82, COLUMNA: 50, TIPO: ,, LEXEMA: ,
+FILA: 83, COLUMNA: 10, TIPO: id, LEXEMA: b
+FILA: 83, COLUMNA: 12, TIPO: :, LEXEMA: :
+FILA: 83, COLUMNA: 14, TIPO: type, LEXEMA: AUTO_TYPE
+FILA: 83, COLUMNA: 24, TIPO: <-, LEXEMA: <-
+FILA: 83, COLUMNA: 27, TIPO: (, LEXEMA: (
+FILA: 83, COLUMNA: 28, TIPO: new, LEXEMA: new
+FILA: 83, COLUMNA: 32, TIPO: type, LEXEMA: A2I
+FILA: 83, COLUMNA: 35, TIPO: ), LEXEMA: )
+FILA: 83, COLUMNA: 36, TIPO: ., LEXEMA: .
+FILA: 83, COLUMNA: 37, TIPO: id, LEXEMA: i2a
+FILA: 83, COLUMNA: 40, TIPO: (, LEXEMA: (
+FILA: 83, COLUMNA: 41, TIPO: integer, LEXEMA: 678987
+FILA: 83, COLUMNA: 47, TIPO: ), LEXEMA: )
+FILA: 83, COLUMNA: 49, TIPO: in, LEXEMA: in
+FILA: 84, COLUMNA: 6, TIPO: {, LEXEMA: {
+FILA: 85, COLUMNA: 8, TIPO: id, LEXEMA: out_int
+FILA: 85, COLUMNA: 15, TIPO: (, LEXEMA: (
+FILA: 85, COLUMNA: 16, TIPO: id, LEXEMA: a
+FILA: 85, COLUMNA: 17, TIPO: ), LEXEMA: )
+FILA: 85, COLUMNA: 19, TIPO: ;, LEXEMA: ;
+FILA: 86, COLUMNA: 8, TIPO: id, LEXEMA: out_string
+FILA: 86, COLUMNA: 18, TIPO: (, LEXEMA: (
+FILA: 86, COLUMNA: 19, TIPO: string, LEXEMA:  == 
+FILA: 86, COLUMNA: 25, TIPO: ), LEXEMA: )
+FILA: 86, COLUMNA: 27, TIPO: ;, LEXEMA: ;
+FILA: 87, COLUMNA: 8, TIPO: id, LEXEMA: out_string
+FILA: 87, COLUMNA: 18, TIPO: (, LEXEMA: (
+FILA: 87, COLUMNA: 19, TIPO: id, LEXEMA: b
+FILA: 87, COLUMNA: 20, TIPO: ), LEXEMA: )
+FILA: 87, COLUMNA: 22, TIPO: ;, LEXEMA: ;
+FILA: 88, COLUMNA: 8, TIPO: id, LEXEMA: out_string
+FILA: 88, COLUMNA: 18, TIPO: (, LEXEMA: (
+FILA: 88, COLUMNA: 19, TIPO: string, LEXEMA: \n
+FILA: 88, COLUMNA: 23, TIPO: ), LEXEMA: )
+FILA: 88, COLUMNA: 24, TIPO: ;, LEXEMA: ;
+FILA: 89, COLUMNA: 6, TIPO: }, LEXEMA: }
+FILA: 90, COLUMNA: 2, TIPO: }, LEXEMA: }
+FILA: 90, COLUMNA: 4, TIPO: ;, LEXEMA: ;
+FILA: 91, COLUMNA: 0, TIPO: }, LEXEMA: }
+FILA: 91, COLUMNA: 2, TIPO: ;, LEXEMA: ;
+FILA: 0, COLUMNA: 0, TIPO: $, LEXEMA: $
+============================ PARSER ============================
+<feature-list> -> ε
+<def-class> -> class type { <feature-list> } ;
+<param> -> id : type
+<param-list> -> <param>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> string
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> string
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> string
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> string
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> string
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> string
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> string
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> string
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> string
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> string
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<member-call> -> id ( )
+<atom> -> <member-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr-list> -> <expr> ;
+<expr-list> -> <expr> ; <expr-list>
+<expr> -> { <expr-list> }
+<expr> -> if <expr> then <expr> else <expr> fi
+<expr> -> if <expr> then <expr> else <expr> fi
+<expr> -> if <expr> then <expr> else <expr> fi
+<expr> -> if <expr> then <expr> else <expr> fi
+<expr> -> if <expr> then <expr> else <expr> fi
+<expr> -> if <expr> then <expr> else <expr> fi
+<expr> -> if <expr> then <expr> else <expr> fi
+<expr> -> if <expr> then <expr> else <expr> fi
+<expr> -> if <expr> then <expr> else <expr> fi
+<expr> -> if <expr> then <expr> else <expr> fi
+<feature> -> id ( <param-list> ) : type { <expr> } ;
+<param> -> id : type
+<param-list> -> <param>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> string
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> string
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> string
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> string
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> string
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> string
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> string
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> string
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> string
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> string
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<member-call> -> id ( )
+<atom> -> <member-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> string
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr-list> -> <expr> ;
+<expr-list> -> <expr> ; <expr-list>
+<expr> -> { <expr-list> }
+<expr> -> if <expr> then <expr> else <expr> fi
+<expr> -> if <expr> then <expr> else <expr> fi
+<expr> -> if <expr> then <expr> else <expr> fi
+<expr> -> if <expr> then <expr> else <expr> fi
+<expr> -> if <expr> then <expr> else <expr> fi
+<expr> -> if <expr> then <expr> else <expr> fi
+<expr> -> if <expr> then <expr> else <expr> fi
+<expr> -> if <expr> then <expr> else <expr> fi
+<expr> -> if <expr> then <expr> else <expr> fi
+<expr> -> if <expr> then <expr> else <expr> fi
+<feature> -> id ( <param-list> ) : type { <expr> } ;
+<param> -> id : type
+<param-list> -> <param>
+<atom> -> id
+<func-call> -> . id ( )
+<atom> -> <atom> <func-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<arg-list> -> <expr> , <arg-list>
+<func-call> -> . id ( <arg-list> )
+<atom> -> <atom> <func-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> string
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<func-call> -> . id ( )
+<atom> -> <atom> <func-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <arith> - <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<arg-list> -> <expr> , <arg-list>
+<func-call> -> . id ( <arg-list> )
+<atom> -> <atom> <func-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<member-call> -> id ( <arg-list> )
+<atom> -> <member-call>
+<factor-2> -> ~ <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<arg-list> -> <expr> , <arg-list>
+<func-call> -> . id ( <arg-list> )
+<atom> -> <atom> <func-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> string
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<func-call> -> . id ( )
+<atom> -> <atom> <func-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <arith> - <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<arg-list> -> <expr> , <arg-list>
+<func-call> -> . id ( <arg-list> )
+<atom> -> <atom> <func-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<member-call> -> id ( <arg-list> )
+<atom> -> <member-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<member-call> -> id ( <arg-list> )
+<atom> -> <member-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr> -> if <expr> then <expr> else <expr> fi
+<expr> -> if <expr> then <expr> else <expr> fi
+<expr> -> if <expr> then <expr> else <expr> fi
+<feature> -> id ( <param-list> ) : type { <expr> } ;
+<param> -> id : type
+<param-list> -> <param>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<let-list> -> id : type <- <expr>
+<atom> -> id
+<func-call> -> . id ( )
+<atom> -> <atom> <func-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<let-list> -> id : type <- <expr>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<let-list> -> id : type <- <expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> < <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <term> * <factor>
+<arith> -> <term>
+<atom> -> id
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<arg-list> -> <expr> , <arg-list>
+<func-call> -> . id ( <arg-list> )
+<atom> -> <atom> <func-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<member-call> -> id ( <arg-list> )
+<atom> -> <member-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <arith> + <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr> -> id <- <expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <arith> + <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr> -> id <- <expr>
+<expr-list> -> <expr> ;
+<expr-list> -> <expr> ; <expr-list>
+<expr> -> { <expr-list> }
+<expr> -> while <expr> loop <expr> pool
+<expr> -> let <let-list> in <expr>
+<atom> -> ( <expr> )
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr> -> let <let-list> in <expr>
+<atom> -> ( <expr> )
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr-list> -> <expr> ;
+<expr-list> -> <expr> ; <expr-list>
+<expr> -> { <expr-list> }
+<expr> -> let <let-list> in <expr>
+<atom> -> ( <expr> )
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<feature> -> id ( <param-list> ) : type { <expr> } ;
+<param> -> id : type
+<param-list> -> <param>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> string
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> < <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<member-call> -> id ( <arg-list> )
+<atom> -> <member-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> string
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<atom> -> integer
+<factor-2> -> ~ <atom>
+<factor> -> <factor-2>
+<term> -> <term> * <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<member-call> -> id ( <arg-list> )
+<atom> -> <member-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<func-call> -> . id ( <arg-list> )
+<atom> -> <atom> <func-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr> -> if <expr> then <expr> else <expr> fi
+<expr> -> if <expr> then <expr> else <expr> fi
+<feature> -> id ( <param-list> ) : type { <expr> } ;
+<param> -> id : type
+<param-list> -> <param>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <comp-expr> = <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> string
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <term> / <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<let-list> -> id : type <- <expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<member-call> -> id ( <arg-list> )
+<atom> -> <member-call>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <term> * <factor>
+<arith> -> <arith> - <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<member-call> -> id ( <arg-list> )
+<atom> -> <member-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<func-call> -> . id ( <arg-list> )
+<atom> -> <atom> <func-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr> -> let <let-list> in <expr>
+<atom> -> ( <expr> )
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr> -> if <expr> then <expr> else <expr> fi
+<feature> -> id ( <param-list> ) : type { <expr> } ;
+<feature-list> -> ε
+<feature-list> -> <feature> <feature-list>
+<feature-list> -> <feature> <feature-list>
+<feature-list> -> <feature> <feature-list>
+<feature-list> -> <feature> <feature-list>
+<feature-list> -> <feature> <feature-list>
+<feature-list> -> <feature> <feature-list>
+<def-class> -> class type { <feature-list> } ;
+<atom> -> new type
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> ( <expr> )
+<atom> -> string
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<func-call> -> . id ( <arg-list> )
+<atom> -> <atom> <func-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> new type
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> ( <expr> )
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<func-call> -> . id ( <arg-list> )
+<atom> -> <atom> <func-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<let-list> -> id : type <- <expr>
+<let-list> -> id : type <- <expr> , <let-list>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<member-call> -> id ( <arg-list> )
+<atom> -> <member-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> string
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<member-call> -> id ( <arg-list> )
+<atom> -> <member-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<member-call> -> id ( <arg-list> )
+<atom> -> <member-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> string
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<arg-list> -> <expr>
+<member-call> -> id ( <arg-list> )
+<atom> -> <member-call>
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr-list> -> <expr> ;
+<expr-list> -> <expr> ; <expr-list>
+<expr-list> -> <expr> ; <expr-list>
+<expr-list> -> <expr> ; <expr-list>
+<expr> -> { <expr-list> }
+<expr> -> let <let-list> in <expr>
+<feature> -> id ( ) : type { <expr> } ;
+<feature-list> -> ε
+<feature-list> -> <feature> <feature-list>
+<def-class> -> class type inherits type { <feature-list> } ;
+<class-list> -> <def-class>
+<class-list> -> <def-class> <class-list>
+<class-list> -> <def-class> <class-list>
+<program> -> <class-list>
+============================= AST ==============================
+\__ProgramNode [<class> ... <class>]
+    \__ClassDeclarationNode : class JustThere  { <feature> ... <feature> }
+
+    \__ClassDeclarationNode : class A2I  { <feature> ... <feature> }
+        \__FuncDeclarationNode : c2i(char : AUTO_TYPE) : AUTO_TYPE { <expr> }
+            \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                \__<expr> EqualNode <expr>
+                    \__IdNode : char
+                    \__StringNode : 0
+                \__IntegerNode : 0
+                \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                    \__<expr> EqualNode <expr>
+                        \__IdNode : char
+                        \__StringNode : 1
+                    \__IntegerNode : 1
+                    \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                        \__<expr> EqualNode <expr>
+                            \__IdNode : char
+                            \__StringNode : 2
+                        \__IntegerNode : 2
+                        \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                            \__<expr> EqualNode <expr>
+                                \__IdNode : char
+                                \__StringNode : 3
+                            \__IntegerNode : 3
+                            \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                                \__<expr> EqualNode <expr>
+                                    \__IdNode : char
+                                    \__StringNode : 4
+                                \__IntegerNode : 4
+                                \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                                    \__<expr> EqualNode <expr>
+                                        \__IdNode : char
+                                        \__StringNode : 5
+                                    \__IntegerNode : 5
+                                    \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                                        \__<expr> EqualNode <expr>
+                                            \__IdNode : char
+                                            \__StringNode : 6
+                                        \__IntegerNode : 6
+                                        \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                                            \__<expr> EqualNode <expr>
+                                                \__IdNode : char
+                                                \__StringNode : 7
+                                            \__IntegerNode : 7
+                                            \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                                                \__<expr> EqualNode <expr>
+                                                    \__IdNode : char
+                                                    \__StringNode : 8
+                                                \__IntegerNode : 8
+                                                \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                                                    \__<expr> EqualNode <expr>
+                                                        \__IdNode : char
+                                                        \__StringNode : 9
+                                                    \__IntegerNode : 9
+                                                    \__BlockNode : { <expr>; ... <expr>; }
+                                                        \__MemberCallNode : abort(<expr>, ..., <expr>)
+
+                                                        \__IntegerNode : 0
+        \__FuncDeclarationNode : i2c(i : AUTO_TYPE) : AUTO_TYPE { <expr> }
+            \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                \__<expr> EqualNode <expr>
+                    \__IdNode : i
+                    \__IntegerNode : 0
+                \__StringNode : 0
+                \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                    \__<expr> EqualNode <expr>
+                        \__IdNode : i
+                        \__IntegerNode : 1
+                    \__StringNode : 1
+                    \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                        \__<expr> EqualNode <expr>
+                            \__IdNode : i
+                            \__IntegerNode : 2
+                        \__StringNode : 2
+                        \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                            \__<expr> EqualNode <expr>
+                                \__IdNode : i
+                                \__IntegerNode : 3
+                            \__StringNode : 3
+                            \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                                \__<expr> EqualNode <expr>
+                                    \__IdNode : i
+                                    \__IntegerNode : 4
+                                \__StringNode : 4
+                                \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                                    \__<expr> EqualNode <expr>
+                                        \__IdNode : i
+                                        \__IntegerNode : 5
+                                    \__StringNode : 5
+                                    \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                                        \__<expr> EqualNode <expr>
+                                            \__IdNode : i
+                                            \__IntegerNode : 6
+                                        \__StringNode : 6
+                                        \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                                            \__<expr> EqualNode <expr>
+                                                \__IdNode : i
+                                                \__IntegerNode : 7
+                                            \__StringNode : 7
+                                            \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                                                \__<expr> EqualNode <expr>
+                                                    \__IdNode : i
+                                                    \__IntegerNode : 8
+                                                \__StringNode : 8
+                                                \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                                                    \__<expr> EqualNode <expr>
+                                                        \__IdNode : i
+                                                        \__IntegerNode : 9
+                                                    \__StringNode : 9
+                                                    \__BlockNode : { <expr>; ... <expr>; }
+                                                        \__MemberCallNode : abort(<expr>, ..., <expr>)
+
+                                                        \__StringNode : 
+        \__FuncDeclarationNode : a2i(s : AUTO_TYPE) : AUTO_TYPE { <expr> }
+            \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                \__<expr> EqualNode <expr>
+                    \__FunctionCallNode : <obj>.length(<expr>, ..., <expr>)
+                        \__IdNode : s
+
+                    \__IntegerNode : 0
+                \__IntegerNode : 0
+                \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                    \__<expr> EqualNode <expr>
+                        \__FunctionCallNode : <obj>.substr(<expr>, ..., <expr>)
+                            \__IdNode : s
+                            \__IntegerNode : 0
+                            \__IntegerNode : 1
+                        \__StringNode : -
+                    \__ComplementNode <expr>
+                        \__MemberCallNode : a2i_aux(<expr>, ..., <expr>)
+                            \__FunctionCallNode : <obj>.substr(<expr>, ..., <expr>)
+                                \__IdNode : s
+                                \__IntegerNode : 1
+                                \__<expr> MinusNode <expr>
+                                    \__FunctionCallNode : <obj>.length(<expr>, ..., <expr>)
+                                        \__IdNode : s
+
+                                    \__IntegerNode : 1
+                    \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                        \__<expr> EqualNode <expr>
+                            \__FunctionCallNode : <obj>.substr(<expr>, ..., <expr>)
+                                \__IdNode : s
+                                \__IntegerNode : 0
+                                \__IntegerNode : 1
+                            \__StringNode : +
+                        \__MemberCallNode : a2i_aux(<expr>, ..., <expr>)
+                            \__FunctionCallNode : <obj>.substr(<expr>, ..., <expr>)
+                                \__IdNode : s
+                                \__IntegerNode : 1
+                                \__<expr> MinusNode <expr>
+                                    \__FunctionCallNode : <obj>.length(<expr>, ..., <expr>)
+                                        \__IdNode : s
+
+                                    \__IntegerNode : 1
+                        \__MemberCallNode : a2i_aux(<expr>, ..., <expr>)
+                            \__IdNode : s
+        \__FuncDeclarationNode : a2i_aux(s : AUTO_TYPE) : AUTO_TYPE { <expr> }
+            \__LetInNode : let int : AUTO_TYPE <- <expr> in <expr>
+                \__IntegerNode : 0
+                \__BlockNode : { <expr>; ... <expr>; }
+                    \__LetInNode : let j : AUTO_TYPE <- <expr> in <expr>
+                        \__FunctionCallNode : <obj>.length(<expr>, ..., <expr>)
+                            \__IdNode : s
+
+                        \__LetInNode : let i : AUTO_TYPE <- <expr> in <expr>
+                            \__IntegerNode : 0
+                            \__WhileNode : while <expr> loop <expr> pool
+                                \__<expr> LessNode <expr>
+                                    \__IdNode : i
+                                    \__IdNode : j
+                                \__BlockNode : { <expr>; ... <expr>; }
+                                    \__AssingNode : int <- <expr>
+                                        \__<expr> PlusNode <expr>
+                                            \__<expr> StarNode <expr>
+                                                \__IdNode : int
+                                                \__IntegerNode : 10
+                                            \__MemberCallNode : c2i(<expr>, ..., <expr>)
+                                                \__FunctionCallNode : <obj>.substr(<expr>, ..., <expr>)
+                                                    \__IdNode : s
+                                                    \__IdNode : i
+                                                    \__IntegerNode : 1
+                                    \__AssingNode : i <- <expr>
+                                        \__<expr> PlusNode <expr>
+                                            \__IdNode : i
+                                            \__IntegerNode : 1
+                    \__IdNode : int
+        \__FuncDeclarationNode : i2a(i : AUTO_TYPE) : AUTO_TYPE { <expr> }
+            \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                \__<expr> EqualNode <expr>
+                    \__IdNode : i
+                    \__IntegerNode : 0
+                \__StringNode : 0
+                \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                    \__<expr> LessNode <expr>
+                        \__IntegerNode : 0
+                        \__IdNode : i
+                    \__MemberCallNode : i2a_aux(<expr>, ..., <expr>)
+                        \__IdNode : i
+                    \__FunctionCallNode : <obj>.concat(<expr>, ..., <expr>)
+                        \__StringNode : -
+                        \__MemberCallNode : i2a_aux(<expr>, ..., <expr>)
+                            \__<expr> StarNode <expr>
+                                \__IdNode : i
+                                \__ComplementNode <expr>
+                                    \__IntegerNode : 1
+        \__FuncDeclarationNode : i2a_aux(i : AUTO_TYPE) : AUTO_TYPE { <expr> }
+            \__IfThenElseNode : if <expr> then <expr> else <expr> fi
+                \__<expr> EqualNode <expr>
+                    \__IdNode : i
+                    \__IntegerNode : 0
+                \__StringNode : 
+                \__LetInNode : let next : AUTO_TYPE <- <expr> in <expr>
+                    \__<expr> DivNode <expr>
+                        \__IdNode : i
+                        \__IntegerNode : 10
+                    \__FunctionCallNode : <obj>.concat(<expr>, ..., <expr>)
+                        \__MemberCallNode : i2a_aux(<expr>, ..., <expr>)
+                            \__IdNode : next
+                        \__MemberCallNode : i2c(<expr>, ..., <expr>)
+                            \__<expr> MinusNode <expr>
+                                \__IdNode : i
+                                \__<expr> StarNode <expr>
+                                    \__IdNode : next
+                                    \__IntegerNode : 10
+    \__ClassDeclarationNode : class Main inherits IO { <feature> ... <feature> }
+        \__FuncDeclarationNode : main() : AUTO_TYPE { <expr> }
+            \__LetInNode : let a : AUTO_TYPE <- <expr>, b : AUTO_TYPE <- <expr> in <expr>
+                \__FunctionCallNode : <obj>.a2i(<expr>, ..., <expr>)
+                    \__NewNode : new A2I
+                    \__StringNode : 678987
+                \__FunctionCallNode : <obj>.i2a(<expr>, ..., <expr>)
+                    \__NewNode : new A2I
+                    \__IntegerNode : 678987
+                \__BlockNode : { <expr>; ... <expr>; }
+                    \__MemberCallNode : out_int(<expr>, ..., <expr>)
+                        \__IdNode : a
+                    \__MemberCallNode : out_string(<expr>, ..., <expr>)
+                        \__StringNode :  == 
+                    \__MemberCallNode : out_string(<expr>, ..., <expr>)
+                        \__IdNode : b
+                    \__MemberCallNode : out_string(<expr>, ..., <expr>)
+                        \__StringNode : \n
+======================= COLECCIONANDO TIPOS ========================
+ERRORES : [
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {}
+    
+    tipo IO {}
+    
+    tipo Int {}
+    
+    tipo String {}
+    
+    tipo Bool {}
+    
+    tipo JustThere {}
+    
+    tipo A2I {}
+    
+    tipo Main {}
+    
+}
+======================= CONSTRUYENDO TIPOS ========================
+ERRORES : [
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {
+        [method] abort() : Object ;
+        [method] type_name() : String ;
+        [method] copy() : SELF_TYPE ;
+    }
+    
+    tipo IO : Object {
+        [method] out_string(s : String) : SELF_TYPE ;
+        [method] out_int(i : Int) : SELF_TYPE ;
+        [method] in_string() : String ;
+        [method] in_int() : Int ;
+    }
+    
+    tipo Int : Object {}
+    
+    tipo String : Object {
+        [method] length() : Int ;
+        [method] concat(s : String) : String ;
+        [method] substr(pos : Int, len : Int) : String ;
+    }
+    
+    tipo Bool : Object {}
+    
+    tipo JustThere : Object {}
+    
+    tipo A2I : Object {
+        [method] c2i(char : AUTO_TYPE) : AUTO_TYPE ;
+        [method] i2c(i : AUTO_TYPE) : AUTO_TYPE ;
+        [method] a2i(s : AUTO_TYPE) : AUTO_TYPE ;
+        [method] a2i_aux(s : AUTO_TYPE) : AUTO_TYPE ;
+        [method] i2a(i : AUTO_TYPE) : AUTO_TYPE ;
+        [method] i2a_aux(i : AUTO_TYPE) : AUTO_TYPE ;
+    }
+    
+    tipo Main : IO {
+        [method] main() : AUTO_TYPE ;
+    }
+    
+}
+======================== CHEQUEANDO TIPOS =========================
+ERRORES : [
+    ERROR!!! LINEA 37 , COLUMNA 13 : EL METODO "length" NO ESTA DEFINIDO EN "AUTO_TYPE".
+    ERROR!!! LINEA 37 , COLUMNA 13 : EL METODO "length" NO PUEDE SER dispatched.
+    ERROR!!! LINEA 37 , COLUMNA 13 : LA OPERACION ENTRE "<ERROR!!!>" Y "Int" NO ESTA DEFINIDA.
+    ERROR!!! LINEA 38 , COLUMNA 6 : EL METODO "substr" NO ESTA DEFINIDO EN "AUTO_TYPE".
+    ERROR!!! LINEA 38 , COLUMNA 6 : EL METODO "substr" NO PUEDE SER dispatched.
+    ERROR!!! LINEA 38 , COLUMNA 6 : LA OPERACION ENTRE "<ERROR!!!>" Y "String" NO ESTA DEFINIDA.
+    ERROR!!! LINEA 38 , COLUMNA 40 : EL METODO "substr" NO ESTA DEFINIDO EN "AUTO_TYPE".
+    ERROR!!! LINEA 38 , COLUMNA 51 : EL METODO "length" NO ESTA DEFINIDO EN "AUTO_TYPE".
+    ERROR!!! LINEA 38 , COLUMNA 51 : EL METODO "length" NO PUEDE SER dispatched.
+    ERROR!!! LINEA 38 , COLUMNA 40 : EL METODO "substr" NO PUEDE SER dispatched.
+    ERROR!!! LINEA 39 , COLUMNA 13 : EL METODO "substr" NO ESTA DEFINIDO EN "AUTO_TYPE".
+    ERROR!!! LINEA 39 , COLUMNA 13 : EL METODO "substr" NO PUEDE SER dispatched.
+    ERROR!!! LINEA 39 , COLUMNA 13 : LA OPERACION ENTRE "<ERROR!!!>" Y "String" NO ESTA DEFINIDA.
+    ERROR!!! LINEA 39 , COLUMNA 46 : EL METODO "substr" NO ESTA DEFINIDO EN "AUTO_TYPE".
+    ERROR!!! LINEA 39 , COLUMNA 57 : EL METODO "length" NO ESTA DEFINIDO EN "AUTO_TYPE".
+    ERROR!!! LINEA 39 , COLUMNA 57 : EL METODO "length" NO PUEDE SER dispatched.
+    ERROR!!! LINEA 39 , COLUMNA 46 : EL METODO "substr" NO PUEDE SER dispatched.
+    ERROR!!! LINEA 47 , COLUMNA 39 : EL METODO "length" NO ESTA DEFINIDO EN "AUTO_TYPE".
+    ERROR!!! LINEA 47 , COLUMNA 39 : EL METODO "length" NO PUEDE SER dispatched.
+    ERROR!!! LINEA 51 , COLUMNA 31 : EL METODO "substr" NO ESTA DEFINIDO EN "AUTO_TYPE".
+    ERROR!!! LINEA 51 , COLUMNA 31 : EL METODO "substr" NO PUEDE SER dispatched.
+    ERROR!!! LINEA 73 , COLUMNA 16 : EL METODO "concat" NO ESTA DEFINIDO EN "AUTO_TYPE".
+    ERROR!!! LINEA 73 , COLUMNA 16 : EL METODO "concat" NO PUEDE SER dispatched.
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {
+        [method] abort() : Object ;
+        [method] type_name() : String ;
+        [method] copy() : SELF_TYPE ;
+    }
+    
+    tipo IO : Object {
+        [method] out_string(s : String) : SELF_TYPE ;
+        [method] out_int(i : Int) : SELF_TYPE ;
+        [method] in_string() : String ;
+        [method] in_int() : Int ;
+    }
+    
+    tipo Int : Object {}
+    
+    tipo String : Object {
+        [method] length() : Int ;
+        [method] concat(s : String) : String ;
+        [method] substr(pos : Int, len : Int) : String ;
+    }
+    
+    tipo Bool : Object {}
+    
+    tipo JustThere : Object {}
+    
+    tipo A2I : Object {
+        [method] c2i(char : AUTO_TYPE) : AUTO_TYPE ;
+        [method] i2c(i : AUTO_TYPE) : AUTO_TYPE ;
+        [method] a2i(s : AUTO_TYPE) : AUTO_TYPE ;
+        [method] a2i_aux(s : AUTO_TYPE) : AUTO_TYPE ;
+        [method] i2a(i : AUTO_TYPE) : AUTO_TYPE ;
+        [method] i2a_aux(i : AUTO_TYPE) : AUTO_TYPE ;
+    }
+    
+    tipo Main : IO {
+        [method] main() : AUTO_TYPE ;
+    }
+    
+}
+======================== INFERENCIA DE TIPOS ========================
+INFERENCIA : [
+    EL PARAMETRO "char", EN EL METODO "c2i" Y EN LA CLASE "A2I" POSEE TIPO "String".
+    EL METODO "c2i" DE LA CLASE "A2I" POSEE COMO TIPO DE RETORNO "Int".
+    EL PARAMETRO "i", EN EL METODO "i2c" Y EN LA CLASE "A2I" POSEE TIPO "Int".
+    EL METODO "i2c" DE LA CLASE "A2I" POSEE COMO TIPO DE RETORNO "String".
+    LINEA 45 , COLUMNA 6 : LA VARIABLE "int" POSEE TIPO "Int".
+    LINEA 48 , COLUMNA 16 : LA VARIABLE "i" POSEE TIPO "Int".
+    LINEA 47 , COLUMNA 20 : LA VARIABLE "j" POSEE TIPO "Int".
+    EL METODO "a2i_aux" DE LA CLASE "A2I" POSEE COMO TIPO DE RETORNO "Int".
+    EL PARAMETRO "i", EN EL METODO "i2a" Y EN LA CLASE "A2I" POSEE TIPO "Int".
+    EL METODO "i2a" DE LA CLASE "A2I" POSEE COMO TIPO DE RETORNO "String".
+    LINEA 72 , COLUMNA 10 : LA VARIABLE "next" POSEE TIPO "Int".
+    EL PARAMETRO "i", EN EL METODO "i2a_aux" Y EN LA CLASE "A2I" POSEE TIPO "Int".
+    LINEA 83 , COLUMNA 10 : LA VARIABLE "b" POSEE TIPO "String".
+    LINEA 82 , COLUMNA 10 : LA VARIABLE "a" POSEE TIPO "Int".
+    EL METODO "main" DE LA CLASE "Main" POSEE COMO TIPO DE RETORNO "Main".
+    EL METODO "a2i" DE LA CLASE "A2I" POSEE COMO TIPO DE RETORNO "Int".
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {
+        [method] abort() : Object ;
+        [method] type_name() : String ;
+        [method] copy() : SELF_TYPE ;
+    }
+    
+    tipo IO : Object {
+        [method] out_string(s : String) : SELF_TYPE ;
+        [method] out_int(i : Int) : SELF_TYPE ;
+        [method] in_string() : String ;
+        [method] in_int() : Int ;
+    }
+    
+    tipo Int : Object {}
+    
+    tipo String : Object {
+        [method] length() : Int ;
+        [method] concat(s : String) : String ;
+        [method] substr(pos : Int, len : Int) : String ;
+    }
+    
+    tipo Bool : Object {}
+    
+    tipo JustThere : Object {}
+    
+    tipo A2I : Object {
+        [method] c2i(char : String) : Int ;
+        [method] i2c(i : Int) : String ;
+        [method] a2i(s : AUTO_TYPE) : Int ;
+        [method] a2i_aux(s : AUTO_TYPE) : Int ;
+        [method] i2a(i : Int) : String ;
+        [method] i2a_aux(i : Int) : AUTO_TYPE ;
+    }
+    
+    tipo Main : IO {
+        [method] main() : Main ;
+    }
+    
+}

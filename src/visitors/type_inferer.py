@@ -42,7 +42,7 @@ class TypeInferer:
             if var.InferType():
                 self.changed = True
                 attr.type = var.type
-                self.inferences.append(INFERENCE_ATTR % (attr.name, var.type.name, self.current_type.name))
+                self.inferences.append(INFERENCE_ATTR % (attr.name, self.current_type.name, var.type.name))
 
     @visitor.when(AttrDeclarationNode)
     def visit(self, node, scope):
@@ -58,7 +58,7 @@ class TypeInferer:
             if var.InferType():
                 self.changed = True
                 attr.type = var.type
-                self.inferences.append(INFERENCE_ATTR % (attr.name, var.type.name, self.current_type.name))
+                self.inferences.append(INFERENCE_ATTR % (attr.name, self.current_type.name, var.type.name))
 
     @visitor.when(FuncDeclarationNode)
     def visit(self, node, scope):

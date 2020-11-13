@@ -1,0 +1,198 @@
+============================ LEXER =============================
+FILA: 1, COLUMNA: 0, TIPO: class, LEXEMA: class
+FILA: 1, COLUMNA: 6, TIPO: type, LEXEMA: Main
+FILA: 1, COLUMNA: 11, TIPO: inherits, LEXEMA: inherits
+FILA: 1, COLUMNA: 20, TIPO: type, LEXEMA: IO
+FILA: 1, COLUMNA: 23, TIPO: {, LEXEMA: {
+FILA: 3, COLUMNA: 1, TIPO: id, LEXEMA: a
+FILA: 3, COLUMNA: 2, TIPO: :, LEXEMA: :
+FILA: 3, COLUMNA: 4, TIPO: type, LEXEMA: AUTO_TYPE
+FILA: 3, COLUMNA: 13, TIPO: ;, LEXEMA: ;
+FILA: 5, COLUMNA: 1, TIPO: id, LEXEMA: main
+FILA: 5, COLUMNA: 5, TIPO: (, LEXEMA: (
+FILA: 5, COLUMNA: 6, TIPO: ), LEXEMA: )
+FILA: 5, COLUMNA: 8, TIPO: :, LEXEMA: :
+FILA: 5, COLUMNA: 10, TIPO: type, LEXEMA: Int
+FILA: 5, COLUMNA: 14, TIPO: {, LEXEMA: {
+FILA: 6, COLUMNA: 2, TIPO: while, LEXEMA: while
+FILA: 6, COLUMNA: 8, TIPO: id, LEXEMA: a
+FILA: 6, COLUMNA: 10, TIPO: loop, LEXEMA: loop
+FILA: 6, COLUMNA: 15, TIPO: integer, LEXEMA: 3
+FILA: 6, COLUMNA: 17, TIPO: pool, LEXEMA: pool
+FILA: 7, COLUMNA: 1, TIPO: }, LEXEMA: }
+FILA: 7, COLUMNA: 2, TIPO: ;, LEXEMA: ;
+FILA: 8, COLUMNA: 0, TIPO: }, LEXEMA: }
+FILA: 8, COLUMNA: 1, TIPO: ;, LEXEMA: ;
+FILA: 0, COLUMNA: 0, TIPO: $, LEXEMA: $
+============================ PARSER ============================
+<feature> -> id : type ;
+<atom> -> id
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<atom> -> integer
+<factor-2> -> <atom>
+<factor> -> <factor-2>
+<term> -> <factor>
+<arith> -> <term>
+<comp-expr> -> <arith>
+<truth-expr> -> <comp-expr>
+<expr> -> <truth-expr>
+<expr> -> while <expr> loop <expr> pool
+<feature> -> id ( ) : type { <expr> } ;
+<feature-list> -> ε
+<feature-list> -> <feature> <feature-list>
+<feature-list> -> <feature> <feature-list>
+<def-class> -> class type inherits type { <feature-list> } ;
+<class-list> -> <def-class>
+<program> -> <class-list>
+============================= AST ==============================
+\__ProgramNode [<class> ... <class>]
+    \__ClassDeclarationNode : class Main inherits IO { <feature> ... <feature> }
+        \__AttrDeclarationNode : a : AUTO_TYPE;
+        \__FuncDeclarationNode : main() : Int { <expr> }
+            \__WhileNode : while <expr> loop <expr> pool
+                \__IdNode : a
+                \__IntegerNode : 3
+======================= COLECCIONANDO TIPOS ========================
+ERRORES : [
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {}
+    
+    tipo IO {}
+    
+    tipo Int {}
+    
+    tipo String {}
+    
+    tipo Bool {}
+    
+    tipo Main {}
+    
+}
+======================= CONSTRUYENDO TIPOS ========================
+ERRORES : [
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {
+        [method] abort() : Object ;
+        [method] type_name() : String ;
+        [method] copy() : SELF_TYPE ;
+    }
+    
+    tipo IO : Object {
+        [method] out_string(s : String) : SELF_TYPE ;
+        [method] out_int(i : Int) : SELF_TYPE ;
+        [method] in_string() : String ;
+        [method] in_int() : Int ;
+    }
+    
+    tipo Int : Object {}
+    
+    tipo String : Object {
+        [method] length() : Int ;
+        [method] concat(s : String) : String ;
+        [method] substr(pos : Int, len : Int) : String ;
+    }
+    
+    tipo Bool : Object {}
+    
+    tipo Main : IO {
+        [attribute] a : AUTO_TYPE ;
+        [method] main() : Int ;
+    }
+    
+}
+======================== CHEQUEANDO TIPOS =========================
+ERRORES : [
+    ERROR!!! LINEA 6 , COLUMNA 8 : NO SE PUEDE CONVERTIR DE "Object" A "Int".
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {
+        [method] abort() : Object ;
+        [method] type_name() : String ;
+        [method] copy() : SELF_TYPE ;
+    }
+    
+    tipo IO : Object {
+        [method] out_string(s : String) : SELF_TYPE ;
+        [method] out_int(i : Int) : SELF_TYPE ;
+        [method] in_string() : String ;
+        [method] in_int() : Int ;
+    }
+    
+    tipo Int : Object {}
+    
+    tipo String : Object {
+        [method] length() : Int ;
+        [method] concat(s : String) : String ;
+        [method] substr(pos : Int, len : Int) : String ;
+    }
+    
+    tipo Bool : Object {}
+    
+    tipo Main : IO {
+        [attribute] a : AUTO_TYPE ;
+        [method] main() : Int ;
+    }
+    
+}
+======================== INFERENCIA DE TIPOS ========================
+INFERENCIA : [
+    EL ATRIBUTO "a" DE LA CLASE "Main" POSEE TIPO "Bool".
+]
+CONTEXTO :
+{
+    tipo SELF_TYPE {}
+    
+    tipo AUTO_TYPE {}
+    
+    tipo Object {
+        [method] abort() : Object ;
+        [method] type_name() : String ;
+        [method] copy() : SELF_TYPE ;
+    }
+    
+    tipo IO : Object {
+        [method] out_string(s : String) : SELF_TYPE ;
+        [method] out_int(i : Int) : SELF_TYPE ;
+        [method] in_string() : String ;
+        [method] in_int() : Int ;
+    }
+    
+    tipo Int : Object {}
+    
+    tipo String : Object {
+        [method] length() : Int ;
+        [method] concat(s : String) : String ;
+        [method] substr(pos : Int, len : Int) : String ;
+    }
+    
+    tipo Bool : Object {}
+    
+    tipo Main : IO {
+        [attribute] a : Bool ;
+        [method] main() : Int ;
+    }
+    
+}
