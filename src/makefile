@@ -17,4 +17,4 @@ visual:
 
 console:
 	# Ejecutando en consola :)
-	python3 type_inferer_console.py ../examples/test7.cl
+	python3 type_inferer_console.py ../examples/test02.cl
