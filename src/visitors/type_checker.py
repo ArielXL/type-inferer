@@ -54,7 +54,7 @@ class TypeChecker:
             self.visit(expr, scope.CreateChild())
             expr_type = expr.static_type
 
-            attr = self.current_type.get_attribute(node.id.lex)
+            attr = self.current_type.GetAttribute(node.id.lex)
             node_type = attr.type
             node_type = self.current_type if isinstance(node_type, SelfType) else node_type
             if not expr_type.ConformsTo(node_type):
