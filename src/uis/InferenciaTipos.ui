@@ -119,6 +119,7 @@
     <addaction name="actionAyuda"/>
     <addaction name="separator"/>
     <addaction name="actionOrientacion"/>
+    <addaction name="actionInforme"/>
     <addaction name="separator"/>
     <addaction name="actionAcercaAutores"/>
    </widget>
@@ -350,6 +351,15 @@
    </property>
    <property name="text">
     <string>Orientación</string>
+   </property>
+  </action>
+  <action name="actionInforme">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/printer.png</normaloff>images/printer.png</iconset>
+   </property>
+   <property name="text">
+    <string>Informe</string>
    </property>
   </action>
  </widget>

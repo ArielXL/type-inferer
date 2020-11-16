@@ -7,6 +7,7 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtPrintSupport import *
 
 from uis.Ayuda import Ui_Ayuda
+from uis.Informe import Ui_Informe
 from uis.Orientacion import Ui_Orientacion
 from uis.AcercaAutores import Ui_AcercaAutores
 from uis.InferenciaTipos import Ui_InferenciaTipos
@@ -39,6 +40,7 @@ class MainWindow(QMainWindow):
         self.ui.actionSalir.triggered.connect(self.Exit)
         self.ui.actionAyuda.triggered.connect(self.Help)
         self.ui.actionOrientacion.triggered.connect(self.Orientation)
+        self.ui.actionInforme.triggered.connect(self.Report)
         self.ui.actionAcercaAutores.triggered.connect(self.AboutAuthors)
 
         self.NewCode()
@@ -238,6 +240,13 @@ class MainWindow(QMainWindow):
     def Orientation(self):
         dialog = QDialog()
         ui_dialog = Ui_Orientacion()
+        ui_dialog.setupUi(dialog)
+
+        dialog.exec()
+
+    def Report(self):
+        dialog = QDialog()
+        ui_dialog = Ui_Informe()
         ui_dialog.setupUi(dialog)
 
         dialog.exec()
