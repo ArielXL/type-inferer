@@ -21,11 +21,108 @@ $ cd src/
 $ make visual
 ```
 
-Sim embargo puede correr el proyecto en consola mediante las líneas, donde aperece ya un archivo predeterminado:
+Sim embargo puede correr el proyecto en consola mediante las líneas, donde aperece un fichero _.cl_ predeterminado:
 
 ```bash
 $ cd src/
 $ make console
+```
+
+Además puede ejecutar el proyecto en consola mediante las líneas, pasando como primer y único parámetro fichero un fichero en _COOL_.
+_.cl_ predeterminado:
+
+```bash
+$ cd src/
+$ python3 type_inferer_console <fichero.cl>
+```
+
+## Sobre la gramática
+
+La gramática base con la cual se reconoce el lenguaje es la especificada en clases prácticas, la cual se muestra a continuación.
+
+```bnf
+<program>                 ::= <class_list>
+
+<class_list>              ::= <def_class> <class_list>
+                          |   <def_class>
+
+<def_class>               ::= class TYPE { <feature_list> } ;
+                          |   class TYPE inherits TYPE { <feature_list> } ;
+
+<feature_list>            ::= <feature> <feature_list>
+                          |   <empty>
+
+<feature>                 ::= ID : TYPE ;
+                          |   ID : TYPE <- <expression> ;
+                          |   ID ( <param_list> ) : TYPE { <expression> } ;
+                          |   ID ( ) : TYPE { <expression> } ;
+
+<param_list>              ::= <param>
+                          |   <param> , <param_list>
+
+<param>                   ::= ID : TYPE
+
+<expression>              ::= if <expression> then <expression> else <expression> fi
+                          |   while <expression> loop <expression> pool
+                          |   { <expr_list> }
+                          |   let <let_list> in <expression>
+                          |   case <expression> of <case_list> esac
+                          |   ID <- <expression>
+                          |   <truth_expr>
+
+<expr_list>               ::= <expression> ;
+                          |   <expression> ; <expr_list>
+
+<let_list>                ::= ID : TYPE
+                          |   ID : TYPE <- <expression>
+                          |   ID : TYPE , <let_list>
+                          |   ID : TYPE <- <expression> , <let_list>
+
+<case_list>               ::= ID : TYPE => <expression> ;
+                          |   ID : TYPE => <expression> ; <case_list>
+
+<truth_expr>              ::= not <truth_expr>
+                          |   <comp_expr>
+
+<comp_expr>               ::= <comp_expr> <= <arith>
+                          |   <comp_expr> < <arith>
+                          |   <comp_expr> = <arith>
+                          |   <arith>
+
+<arith>                   ::= <arith> + <term>
+                          |   <arith> - <term>
+                          |   <term>
+
+<term>                    ::= <term> * <factor>
+                          |   <term> / <factor>
+                          |   <factor>
+
+<factor>                  ::= isvoid + <factor_2>
+                          |   <factor_2>
+
+<factor_2>                ::= ~ <atom>
+                          |   <atom>
+
+<atom>                    ::= <atom> <func_call>
+                          |   <member_call>
+                          |   new TYPE
+                          |   ( <expression> )
+                          |   ID
+                          |   INTEGER
+                          |   STRING
+                          |   TRUE
+                          |   FALSE
+
+<func_call>               ::= . ID ( <arg_list> )
+                          |   . ID ( )
+                          |   @ TYPE . ID ( <arg_list> )
+                          |   @ TYPE . ID ( )
+
+<arg_list>                ::= <expression>
+                          |   expression , <arg_list>
+
+<member_call>             ::= ID ( <arg_list> )
+                          |   ID ( )
 ```
 
 ## Sobre la implementación
