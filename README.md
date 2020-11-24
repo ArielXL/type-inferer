@@ -21,7 +21,7 @@ $ cd src/
 $ make visual
 ```
 
-Sim embargo puede correr el proyecto en consola mediante las líneas, donde aperece un fichero _.cl_ predeterminado:
+Sin embargo puede correr el proyecto en consola mediante las líneas, donde aperece un fichero _.cl_ predeterminado:
 
 ```bash
 $ cd src/
