@@ -1,6 +1,6 @@
 # Inferencia de Tipos
 
-La *inferencia de tipos* es la capacidad de deducir, ya sea parcial o totalmente, el tipo de una expresión en tiempo de compilación. El objetivo de este proyecto es la implementación de un intérprete de _COOL (Classroom Object-Oriented Language)_ que posea inferencia de tipos mediante la adición del tipo **AUTO_TYPE**. Para más información consulte las especificaciones del proyecto en el documento [`Segundo proyecto de Compilacion`](/docs/Orientacion.pdf).
+La *inferencia de tipos* es la capacidad de deducir, ya sea parcial o totalmente, el tipo de una expresión en tiempo de compilación. El objetivo de este proyecto es la implementación de un intérprete de _COOL (Classroom Object-Oriented Language)_ que posea inferencia de tipos mediante la adición del tipo **AUTO_TYPE**. Para más información consulte las especificaciones del proyecto en el documento [`Segundo proyecto de Compilacion`](./docs/Orientacion.pdf).
 
 ## Sobre los autores
 
@@ -10,7 +10,7 @@ Ariel Plasencia Díaz (a.plasencia@estudiantes.matcom.uh.cu)
 
 ## Sobre el lenguaje COOL
 
-Usted podrá encontrar la especificación formal del lenguaje **COOL** en el documento [`COOL Language Reference Manual`](/docs/Manual.pdf).
+Usted podrá encontrar la especificación formal del lenguaje **COOL** en el documento [`COOL Language Reference Manual`](./docs/Manual.pdf).
 
 ## Ejecutando la aplicación
 
@@ -41,88 +41,88 @@ $ python3 type_inferer_console <fichero.cl>
 La gramática base con la cual se reconoce el lenguaje es la especificada en clases prácticas, la cual se muestra a continuación.
 
 ```bnf
-<program>                 ::= <class_list>
+<program>               ::= <class_list>
 
-<class_list>              ::= <def_class> <class_list>
-                          |   <def_class>
+<class_list>            ::= <def_class> <class_list>
+                        |   <def_class>
 
-<def_class>               ::= class TYPE { <feature_list> } ;
-                          |   class TYPE inherits TYPE { <feature_list> } ;
+<def_class>             ::= class TYPE { <feature_list> } ;
+                        |   class TYPE inherits TYPE { <feature_list> } ;
 
-<feature_list>            ::= <feature> <feature_list>
-                          |   <empty>
+<feature_list>          ::= <feature> <feature_list>
+                        |   <empty>
 
-<feature>                 ::= ID : TYPE ;
-                          |   ID : TYPE <- <expression> ;
-                          |   ID ( <param_list> ) : TYPE { <expression> } ;
-                          |   ID ( ) : TYPE { <expression> } ;
+<feature>               ::= ID : TYPE ;
+                        |   ID : TYPE <- <expression> ;
+                        |   ID ( <param_list> ) : TYPE { <expression> } ;
+                        |   ID ( ) : TYPE { <expression> } ;
 
-<param_list>              ::= <param>
-                          |   <param> , <param_list>
+<param_list>            ::= <param>
+                        |   <param> , <param_list>
 
-<param>                   ::= ID : TYPE
+<param>                 ::= ID : TYPE
 
-<expression>              ::= if <expression> then <expression> else <expression> fi
-                          |   while <expression> loop <expression> pool
-                          |   { <expr_list> }
-                          |   let <let_list> in <expression>
-                          |   case <expression> of <case_list> esac
-                          |   ID <- <expression>
-                          |   <truth_expr>
+<expression>            ::= if <expression> then <expression> else <expression> fi
+                        |   while <expression> loop <expression> pool
+                        |   { <expr_list> }
+                        |   let <let_list> in <expression>
+                        |   case <expression> of <case_list> esac
+                        |   ID <- <expression>
+                        |   <truth_expr>
 
-<expr_list>               ::= <expression> ;
-                          |   <expression> ; <expr_list>
+<expr_list>             ::= <expression> ;
+                        |   <expression> ; <expr_list>
 
-<let_list>                ::= ID : TYPE
-                          |   ID : TYPE <- <expression>
-                          |   ID : TYPE , <let_list>
-                          |   ID : TYPE <- <expression> , <let_list>
+<let_list>              ::= ID : TYPE
+                        |   ID : TYPE <- <expression>
+                        |   ID : TYPE , <let_list>
+                        |   ID : TYPE <- <expression> , <let_list>
 
-<case_list>               ::= ID : TYPE => <expression> ;
-                          |   ID : TYPE => <expression> ; <case_list>
+<case_list>             ::= ID : TYPE => <expression> ;
+                        |   ID : TYPE => <expression> ; <case_list>
 
-<truth_expr>              ::= not <truth_expr>
-                          |   <comp_expr>
+<truth_expr>            ::= not <truth_expr>
+                        |   <comp_expr>
 
-<comp_expr>               ::= <comp_expr> <= <arith>
-                          |   <comp_expr> < <arith>
-                          |   <comp_expr> = <arith>
-                          |   <arith>
+<comp_expr>             ::= <comp_expr> <= <arith>
+                        |   <comp_expr> < <arith>
+                        |   <comp_expr> = <arith>
+                        |   <arith>
 
-<arith>                   ::= <arith> + <term>
-                          |   <arith> - <term>
-                          |   <term>
+<arith>                 ::= <arith> + <term>
+                        |   <arith> - <term>
+                        |   <term>
 
-<term>                    ::= <term> * <factor>
-                          |   <term> / <factor>
-                          |   <factor>
+<term>                  ::= <term> * <factor>
+                        |   <term> / <factor>
+                        |   <factor>
 
-<factor>                  ::= isvoid + <factor_2>
-                          |   <factor_2>
+<factor>                ::= isvoid + <factor_2>
+                        |   <factor_2>
 
-<factor_2>                ::= ~ <atom>
-                          |   <atom>
+<factor_2>              ::= ~ <atom>
+                        |   <atom>
 
-<atom>                    ::= <atom> <func_call>
-                          |   <member_call>
-                          |   new TYPE
-                          |   ( <expression> )
-                          |   ID
-                          |   INTEGER
-                          |   STRING
-                          |   TRUE
-                          |   FALSE
+<atom>                  ::= <atom> <func_call>
+                        |   <member_call>
+                        |   new TYPE
+                        |   ( <expression> )
+                        |   ID
+                        |   INTEGER
+                        |   STRING
+                        |   TRUE
+                        |   FALSE
 
-<func_call>               ::= . ID ( <arg_list> )
-                          |   . ID ( )
-                          |   @ TYPE . ID ( <arg_list> )
-                          |   @ TYPE . ID ( )
+<func_call>             ::= . ID ( <arg_list> )
+                        |   . ID ( )
+                        |   @ TYPE . ID ( <arg_list> )
+                        |   @ TYPE . ID ( )
 
-<arg_list>                ::= <expression>
-                          |   expression , <arg_list>
+<arg_list>              ::= <expression>
+                        |   expression , <arg_list>
 
-<member_call>             ::= ID ( <arg_list> )
-                          |   ID ( )
+<member_call>           ::= ID ( <arg_list> )
+                        |   ID ( )
 ```
 
 ## Sobre la implementación
@@ -133,7 +133,7 @@ La arquitectura de la aplicación consiste primeramente en un lexer, el cual no
 
 #### Análisis Lexicográfico
 
-Las implementaciones del lexer fueron realizadas utilizando la biblioteca de python *ply*. La gramática base con la cual se reconoce el lenguaje es la especificada en las clases prácticas. En este punto se definieron los tokens de _COOL_ mediante expresiones regulares, además de otras construcciones del lenguaje. Con esta herramienta se asegura que todos los tokens reconocidos sean los definidos en _COOL_.
+Las implementaciones del lexer fueron realizadas utilizando la biblioteca de python *ply*. La gramática base con la cual se reconoce el lenguaje es la especificada anteriormente. En este punto se definieron los tokens de _COOL_ mediante expresiones regulares, además de otras construcciones del lenguaje. Con esta herramienta se asegura que todos los tokens reconocidos sean los definidos en _COOL_.
 
 #### Análisis Sintáctico
 
@@ -141,7 +141,7 @@ En esta segunda fase se utiliza la salida del lexer y la gramática atributada p
 
 #### Análisis Semántico
 
-Usando el patron visitor, se hacen cuatro recorridos por el _AST_ con el objetivo de lograr el cumplimiento de las reglas de tipado y de inferencia de tipos presentes en _COOL_.
+Usando el patrón visitor, se hacen cuatro recorridos por el _AST_ con el objetivo de lograr el cumplimiento de las reglas de tipado y de inferencia de tipos presentes en _COOL_.
 
 1. **Types Collector:** Se encarga de darle una pasada al código para coleccionar todos los tipos definidos en el programa.
 
