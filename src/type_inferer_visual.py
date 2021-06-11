@@ -98,7 +98,7 @@ class MainWindow(QMainWindow):
             self.dialog_critical(str(exception))
         else:
             self.path = path
-            self.UpdateStatus()        
+            self.UpdateStatus()
 
     def SaveResult(self):
         path, _ = QFileDialog.getSaveFileName(self, GUARDAR_RESULTADO, RUTA, RESULTADOS)
